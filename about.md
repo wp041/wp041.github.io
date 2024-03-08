@@ -1,24 +1,14 @@
 ---
-title: About
+title: 概要
 permalink: /about/
 layout: default
 ---
 
 # {{ page.title }}
 
-## {{ "Hello World!" | downcase }}
+## {{ "Hello World!" | upcase }}
 
-This page tells you a little bit about me.
+初ブログ…ども…
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+取り敢えずプラットフォームを自分で掌握しなければとの強い念があり、それが臨界点に達し、そしてhtmlがあった。
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll

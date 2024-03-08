@@ -1,9 +1,11 @@
 <nav>
   {% for item in site.data.navigation %}
-    <div class="nav"><p><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+    <div class="nav"><p><a href="{{ item.link }}" {% if page.url == item.link %}style="font-weight: 700;"{% endif %}>
       {{ item.name }}
     </a></p></div>
   {% endfor %}
-  <div class="credit">this project is maintained by oki whitepaper<br>
-    ©all rights resssssszzzzzerved by wp041</div>
+  <div class="credit">©2024 Oki Whitepaper. ALL Rights Reserved
+    <br>
+    Reproduction, reposting ormodification of the contentof this site is prohibited.
+</div>
 </nav>

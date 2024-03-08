@@ -4,11 +4,23 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
-<p>
-  {{ page.date | date_to_string }} {% assign author = site.authors | where:
+<p class="postdata">
+  {{ page.date | date: "%Y-%m-%d" }} {% assign author = site.authors | where:
   'short_name', page.author | first %} {% if author %} -
   <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
 </p>
 
-{{ content }} シェア……する？： twitter url なんかリンク https://twitter.com/home
+{{ content }}
+<div class="footer">
+  <small
+    >この記事をシェア……する？：<a
+      href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+      class="twitter-share-button"
+      data-show-count="false"
+      >Tweet用リンク</a
+    >
+    <br />
+    俺のtwitterとか、 なんかリンク： https://twitter.com/wp_041
+  </small>
+</div>
