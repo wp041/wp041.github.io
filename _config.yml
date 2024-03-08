@@ -12,12 +12,11 @@
 # これらは新しいサイトをパーソナライズするために使われます。HTMLファイルを見ると, {{ site.title }}, {{ site.email }} などでアクセスできることがわかります.
 # お望みのカスタム変数を作成することができ, テンプレートから {{ site.myvariable }}経由でアクセスすることができます.
 
-title: Your awesome title
-email: your-email@example.com
+title: 白書オオキ白書（仮）
+email: 041.whitepaper@gmail.com
 description: >- # これは "baseurl: "までの改行を無視することを意味する。
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  初ブログ…ども…
+  取り敢えずプラットフォームを自分で掌握しなければとの強い念があり、それが臨界点に達し、そしてhtmlがあった。
 
 twitter_username: wp_041
 github_username: wp041
