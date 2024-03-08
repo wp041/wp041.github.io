@@ -1,3 +1,62 @@
-.current {
-    color: green;
+body{
+  background-color: #F9F9F4;
+}
+.main{
+  display: flex;
+  color: #0500FF;
+  line-height: 1.1em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  font-weight: 450;
   }
+
+  .left-column{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    padding-top: 20%;
+  }
+  .nav{
+    margin: auto 10%;
+    font-size: 0.8rem;
+    padding-left: 10%;
+  }
+  .credit{
+      font-size: 0.7rem;
+      position: fixed;
+      padding: 3px;
+      bottom: 0;
+    }
+
+
+.center-column{
+  padding: 25%;
+  }
+
+.right-column{
+  // position: fixed;
+    width: 16%;
+    right: 0;
+    font-size: 0.6rem;
+    height: 100%;
+    position: fixed;
+    }
+    .where{
+      font-size: 0.7rem;
+      padding: 3px;
+      position: fixed;
+      top: 2%;
+    }
+    .random{
+      position: fixed;
+      padding: 3px;
+      bottom: 4%;
+      line-height: 1.2em;
+    }
+    .random img {
+      padding: 0.5em;
+      height: 3em;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+    }

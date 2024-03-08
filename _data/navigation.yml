@@ -1,8 +1,8 @@
-- name: Home
+- name: ホーム
   link: /
-- name: About
-  link: /about.html
-- name: Blog
-  link: /blog.html
-- name: Staff
+- name: このサイトの概要
+  link: /about/
+- name: 作者の概要
   link: /staff.html
+- name: 投稿
+  link: /blog.html

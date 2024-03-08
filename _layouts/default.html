@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
+  <!-- 
+  **       ** ******** **
+ /**      /**/**///// /**
+ /**   *  /**/**      /**
+ /**  *** /**/******* /**
+ /** **/**/**/**////  /**
+ /**** //****/**      /**
+ /**/   ///**/********/********
+ //       // //////// ////////
+ 
+ 
+    ******    *******   ****     **** ********
+   **////**  **/////** /**/**   **/**/**/////
+  **    //  **     //**/**//** ** /**/**
+ /**       /**      /**/** //***  /**/*******
+ /**       /**      /**/**  //*   /**/**////
+ //**    **//**     ** /**   /    /**/**
+  //******  //*******  /**        /**/********
+   //////    ///////   //         // ////////
+    -->
   <head>
     <meta charset="utf-8" />
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Shippori+Antique&display=swap");
+    </style>
     {% feed_meta %} {% seo %}
   </head>
   <body>
-    {% include navigation.html %} {{ content }}
+    <div class="main">
+      <div class="left-column">{% include navigation.html %}</div>
+      <div class="center-column">{{ content }}</div>
+      <div class="right-column">{% include right-column.html %}</div>
+    </div>
   </body>
 </html>
