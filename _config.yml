@@ -1,0 +1,50 @@
+# Welcome to Jekyll!
+#
+# この設定ファイルは、ブログ全体に影響を与える設定のためのもので、一度設定すればその後はほとんど編集することはありません。このファイルを頻繁に編集するようであれば、Jekyllのデータファイル機能を使って、頻繁に更新する必要のあるデータを保存することを検討してください。
+#
+# 技術的な理由により、'bundle exec jekyll serve'を使用した場合、このファイルは自動的にリロードされません。このファイルを変更した場合は、サーバープロセスを再起動してください。
+#
+# YAMLの構文についてヘルプが必要な場合、ここに簡単なリファレンスがあります：
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# サイトの設定
+# これらは新しいサイトをパーソナライズするために使われます。HTMLファイルを見ると, {{ site.title }}, {{ site.email }} などでアクセスできることがわかります.
+# お望みのカスタム変数を作成することができ, テンプレートから {{ site.myvariable }}経由でアクセスすることができます.
+
+title: 白書オオキ白書（仮）
+email: 041.whitepaper@gmail.com
+description: >- # これは "baseurl: "までの改行を無視することを意味する。
+  初ブログ…ども…
+  取り敢えずプラットフォームを自分で掌握しなければとの強い念があり、それが臨界点に達し、そしてhtmlがあった。
+author: Oki Whitepaper
+twitter_username: wp_041
+github_username: wp041
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Build settings
+# theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

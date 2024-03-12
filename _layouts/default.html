@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+  **       ** ******** **
+ /**      /**/**///// /**
+ /**   *  /**/**      /**
+ /**  *** /**/******* /**
+ /** **/**/**/**////  /**
+ /**** //****/**      /**
+ /**/   ///**/********/********
+ //       // //////// ////////
+ 
+ 
+    ******    *******   ****     **** ********
+   **////**  **/////** /**/**   **/**/**/////
+  **    //  **     //**/**//** ** /**/**
+ /**       /**      /**/** //***  /**/*******
+ /**       /**      /**/**  //*   /**/**////
+ //**    **//**     ** /**   /    /**/**
+  //******  //*******  /**        /**/********
+   //////    ///////   //         // ////////
+    -->
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="{{ site.title }}"
+      href="/feed.xml"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Shippori+Antique&display=swap");
+    </style>
+    {% feed_meta %} {% seo %}
+  </head>
+  <body>
+    <div class="main">
+      <div class="left-column">{% include navigation.html %}</div>
+      <div class="center-column">
+        {{ content }}<br /><br /><br /><br /><br /><br /><br /><br /><br /><small>
+          このブログはjekyllで構築されてて、ソースコードは<a
+            href="https://github.com/wp041/wp041.github.io/tree/launch"
+            >ここ</a
+          >で見ることができます。
+          <br />
+          <br />
+          なんか問い合わせとか文句あったらメールして：041.whitepaper@gmail.com<br />
+          twitterのDMとかでも良いよ</small
+        >
+      </div>
+      <div class="right-column">{% include right-column.html %}</div>
+    </div>
+  </body>
+</html>

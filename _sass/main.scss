@@ -1,0 +1,88 @@
+body{
+  background-color: #F9F9F4;
+}
+.main{
+  display: flex;
+  color: #0500FF;
+  line-height: 1.1em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  font-weight: 450;
+  }
+
+// 大体の設定
+
+  .left-column{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+  top: 42%;
+  }
+  .nav{
+    font-size: 0.9rem;
+    padding-left: 10%;
+  }
+  .credit{
+      font-size: 0.7rem;
+      font-weight: 300;
+      position: fixed;
+      padding: 3px;
+      bottom: 0;
+    }
+
+
+.center-column{
+  width: 100%;
+  padding-top: 14%;
+  padding-left: 27%;
+  padding-right: 25%;
+  padding-bottom: 5%;
+  }
+
+.right-column{
+  // position: fixed;
+    width: 16%;
+    font-size: 0.65rem;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    }
+    .where{
+      font-size: 0.7rem;
+      padding: 3px;
+      position: fixed;
+      top: 2%;
+    }
+    .random{
+      position: fixed;
+      padding: 3px;
+      bottom: 4%;
+      line-height: 1.15em;
+      text-align: justify;
+      padding-right: 0.5%;
+    }
+    .random img {
+      padding: 0.5em;
+      height: 3em;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+    }
+
+
+// 記事の設定
+h1, h2, h3, h4,h5,h6 {
+    line-height: 1.1em;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+ul {
+  list-style-type: "-   ";
+}
+.postdata{
+  text-align: right;
+}
+.footer{
+  padding-top: 30%;
+}
