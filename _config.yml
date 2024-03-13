@@ -29,6 +29,11 @@ collections:
 include:
   - _pages
 
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
 defaults:
   # _authors
   - scope:
