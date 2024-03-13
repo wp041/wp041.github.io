@@ -26,17 +26,29 @@ collections:
   authors:
     output: true
 
+include:
+  - _pages
+
 defaults:
+  # _authors
   - scope:
       path: ""
       type: "authors"
     values:
       layout: "author"
+  # _posts
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+  # _pages
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  # 全て
   - scope:
       path: ""
     values:

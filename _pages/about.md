@@ -1,6 +1,6 @@
 ---
 title: 概要
-permalink: /about/
+permalink: /about
 layout: default
 ---
 
