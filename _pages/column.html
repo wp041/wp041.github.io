@@ -1,0 +1,21 @@
+---
+layout: default
+title: コラム
+permalink: /column
+---
+
+{% assign tag_names = "" | split: "|" %} {% for posts_by_tag in site.tags %} {%
+if posts_by_tag.first == "column" %} {% assign tag_names = tag_names | push:
+posts_by_tag.first %} {% endif %} {% endfor %} {% assign tag_names = tag_names |
+sort %}
+
+<section class="posts-by-tags">
+  {% for tag_name in tag_names %}
+  <div>
+    <h3>{{ tag_name | replace: "_", " " }}</h3>
+    {% for post in site.tags[tag_name] %}
+    <a href="{{ post.url | prepend: baseurl }}">{{ post.title }}</a>
+    {{ post.excerpt }} {% endfor %}
+  </div>
+  {% endfor %}
+</section>
