@@ -21,6 +21,7 @@ author: Oki Whitepaper
 twitter_username: wp_041
 github_username: wp041
 google_analytics: G-B8H50J7XT4
+excerpt_separator: "<!--抜粋ここまで-->"
 
 collections:
   authors:
