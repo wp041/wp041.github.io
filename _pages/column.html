@@ -10,13 +10,18 @@ sort %}
 
 <section class="posts-by-tags">
   {% for tag_name in tag_names %}
+  <h1>{{ page.title }}</h1>
+  <p>メモ的なのをここに投げるよ！（短文でツイッターみたいな使い方したい）</p>
   <div>
-    <h1>{{ page.title }}</h1>
     {% for post in site.tags[tag_name] %}
-    <a href="{{ post.url | prepend: baseurl }}"
-      >{{ post.title | replace: " ", "-" }}</a
-    >
-    {{ post.excerpt }} {% endfor %}
+    <div class="column">
+      <a class="column-title" href="{{ post.url | prepend: baseurl }}"
+        >{{ post.title | replace: " ", "-" }}</a
+      >
+      <div class="column-date">投稿日：{{ post.date | date: "%Y-%m-%d" }}</div>
+      <div class="column-contents">{{ post.excerpt }}</div>
+    </div>
+    {% endfor %}
   </div>
   {% endfor %}
 </section>

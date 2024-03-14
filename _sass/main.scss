@@ -90,3 +90,24 @@ ul {
 .footer{
   padding-top: 30%;
 }
+
+// コラムの設定
+.posts-by-tags p{
+  padding-bottom: 1em;
+}
+.column{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.column-date{
+  text-align: right;
+  display: inline;
+  font-size: 0.6em;
+}
+.column-title{
+  font-weight: 700;
+}
+.column-contents{
+  line-height: 1em;
+  font-size: 0.8em;
+}

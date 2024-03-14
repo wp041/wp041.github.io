@@ -23,6 +23,9 @@ github_username: wp041
 google_analytics: G-B8H50J7XT4
 excerpt_separator: "<!--抜粋ここまで-->"
 
+markdown: redcarpet
+redcarpet:
+  extensions: ["autolink", "hard_wrap"]
 include:
   - _pages
 
