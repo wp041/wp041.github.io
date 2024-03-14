@@ -1,5 +1,4 @@
 ---
-layout: default
 title: コラム
 permalink: /column
 ---
@@ -12,9 +11,11 @@ sort %}
 <section class="posts-by-tags">
   {% for tag_name in tag_names %}
   <div>
-    <h3>{{ tag_name | replace: "_", " " }}</h3>
+    <h1>{{ page.title }}</h1>
     {% for post in site.tags[tag_name] %}
-    <a href="{{ post.url | prepend: baseurl }}">{{ post.title }}</a>
+    <a href="{{ post.url | prepend: baseurl }}"
+      >{{ post.title | replace: " ", "-" }}</a
+    >
     {{ post.excerpt }} {% endfor %}
   </div>
   {% endfor %}

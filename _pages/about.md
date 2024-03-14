@@ -1,7 +1,6 @@
 ---
 title: 概要
 permalink: /about
-layout: default
 ---
 
 # {{ page.title }}

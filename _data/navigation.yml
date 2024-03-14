@@ -3,6 +3,10 @@
 - name: このサイトの概要
   link: /about
 - name: 作者の概要
-  link: /staff
+  link: /author
 - name: 投稿
   link: /article
+- name: タグ
+  link: /tags
+- name: コラム
+  link: /column
