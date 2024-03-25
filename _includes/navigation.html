@@ -1,4 +1,5 @@
 <nav>
+  <div class="nav"><marquee>⚠️⚠️このページは工事中です⚠️⚠️</marquee></div>
   {% for item in site.data.navigation %}
     <div class="nav"><p><a href="{{ item.link }}" {% if page.url == item.link %}style="font-weight: 700;"{% endif %}>
       {{ item.name }}
