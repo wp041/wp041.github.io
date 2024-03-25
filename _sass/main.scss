@@ -1,9 +1,15 @@
 body{
   background-color: #F9F9F4;
+}
+body:has(.index){
+  // background-color: #F9F9F4;
+  background-color: #8e8e8e;
   background-image: url("/assets/images/ミァハイラスト - トリミング.png");
   background-attachment: fixed;
   background-position: 60% 35%;
+  background-repeat: no-repeat;
 }
+
 .main{
   display: flex;
   color: #0500FF;
@@ -120,8 +126,7 @@ ul {
 // トップページ
 .index{
   font-size: 10em;
-  width: 100%;
-  background-size: cover;
   line-height: 100%;
   font-weight: 100;
+  overflow-wrap: anywhere;
 }
