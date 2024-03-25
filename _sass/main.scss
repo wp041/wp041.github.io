@@ -1,5 +1,8 @@
 body{
   background-color: #F9F9F4;
+  background-image: url("/assets/images/ミァハイラスト - トリミング.png");
+  background-attachment: fixed;
+  background-position: 60% 35%;
 }
 .main{
   display: flex;
@@ -112,4 +115,13 @@ ul {
 .column-contents{
   line-height: 1em;
   font-size: 0.8em;
+}
+
+// トップページ
+.index{
+  font-size: 10em;
+  width: 100%;
+  background-size: cover;
+  line-height: 100%;
+  font-weight: 900;
 }
