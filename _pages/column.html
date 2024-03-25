@@ -18,7 +18,7 @@ sort %}
       <a class="column-title" href="{{ post.url | prepend: baseurl }}"
         >{{ post.title | replace: " ", "-" }}</a
       >
-      <div class="column-date">投稿日：{{ post.date | date: "%Y-%m-%d" }}</div>
+      <div class="column-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
       <div class="column-contents">{{ post.excerpt }}</div>
     </div>
     {% endfor %}

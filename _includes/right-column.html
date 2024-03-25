@@ -1,22 +1,24 @@
 <div class="where">
-  あなたがいる場所： <br />ホーム>投稿>なんとか>かんとか<br /><br />
+  このブログはjekyllで構築されてて、ソースコードは<a
+    href="https://github.com/wp041/wp041.github.io/tree/launch"
+    >ここ</a
+  >で見ることができます。
+  <br />
+  <br />
+  なんか問い合わせとか文句あったらメールして：041.whitepaper@gmail.com<br /><br />
+  <a href="https://twitter.com/wp_041">twitter</a>
+  のDMとかでも良いよ<br /><br />
   あとこれ、<a href="/feed.xml">RSSフィード</a>だよ。あげる
 </div>
 <div class="random">
-  Our seriously shitty cognitive functions feel that when a large number of
-  letters are there, somehow even the information is there, and they find value
-  in it on their own. That's why designers in the world go to the trouble of
-  writing in English what they wrote in Japanese, or suddenly start using
-  French, or Chinese, Korean, or even Cyrillic as meaningless motifs. Well,
-  actually, we think, "What a cool !!!!!!" with that. We think, "What a cool ".
-  Even if there is not a single byte of information there. I've been
-  disappointed many times when I read it and find it doesn't make any sense at
-  all. I think that's good. I think that's good. Because we can't help it, we
-  have an illusion of value. When you get right down to it, architectural styles
-  (Art Nouveau, Rococo, Gothic, etc.) are completely an extension of such
-  things. It's just decoration! That's fine, but, hey, if you're going to put
-  some kind of text there, you might as well do something about it. I know it's
-  your job, but ...... something, it's sad. I think it's sad, I don't know.
-  ......（ここはランダム入れ替わり文章にしたい）<br />
+  {% assign posts = site.posts | where: "random", true %} {% assign random_post
+  = posts | shuffle | sample %}
+  <p>ランダム表示テキスト</p>
+  <h1>{{ random_post.title }}</h1>
+  <p>{{ random_post.content }}</p>
+  <script>
+    console.log(posts);
+    console.log(random_post);
+  </script>
   <img src="/assets/images/wp-logo.svg" alt="ロゴ" />
 </div>

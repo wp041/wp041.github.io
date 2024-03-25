@@ -2,11 +2,9 @@
   link: /
 - name: このサイトの概要
   link: /about
-- name: 作者の概要
-  link: /author
-- name: 投稿
+- name: しっかりとした文章一覧
   link: /article
-- name: タグ
-  link: /tags
-- name: コラム
+- name: 駄文短文一覧
   link: /column
+- name: タグ（トピック）で投稿をソート
+  link: /tags

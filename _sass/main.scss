@@ -99,9 +99,11 @@ ul {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+.column img{
+  width: 100%;
+}
 .column-date{
   text-align: right;
-  display: inline;
   font-size: 0.6em;
 }
 .column-title{
