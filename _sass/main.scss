@@ -17,12 +17,16 @@ body:has(.index){
   font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
   font-weight: 450;
-  }
-
-a:visited{
-  color: hsl(241, 100%, 40%);
 }
 
+a:visited{
+  color: #0500FF;
+}
+hr {
+  border: none;
+  border-top: 1px solid #0500FF;
+  margin: 1em auto;
+}
 // 大体の設定
 
   .left-column{
@@ -92,6 +96,7 @@ h1, h2, h3, h4,h5,h6 {
 }
 ul {
   list-style-type: "-   ";
+  margin-bottom: 0.5em;
 }
 .post-meta{
   text-align: right;
@@ -100,27 +105,30 @@ ul {
   padding-top: 30%;
 }
 
-// コラムの設定
-.posts-by-tags p{
-  padding-bottom: 1em;
+
+.article img{
+  width: 100%;
 }
-.column{
-  padding-top: 1em;
-  padding-bottom: 1em;
+
+
+// コラムの設定
+.column hr{
+  margin: 2em 0 2em 0;
 }
 .column img{
   width: 100%;
 }
-.column-date{
-  text-align: right;
-  font-size: 0.6em;
-}
 .column-title{
   font-weight: 700;
 }
-.column-contents{
-  line-height: 1em;
+.column-date{
   font-size: 0.8em;
+  float: right;
+}
+.column-contents p{
+  line-height: 1.4em;//行間
+  font-size: 0.8em;
+  margin: 0.5em 0 0.5em 0;
 }
 
 // トップページ
