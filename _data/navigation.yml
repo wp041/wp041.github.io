@@ -5,6 +5,6 @@
 - name: しっかりとした文章一覧
   link: /article
 - name: 駄文短文一覧
-  link: /column
+  link: /memo
 - name: タグ（トピック）で投稿をソート
   link: /tags

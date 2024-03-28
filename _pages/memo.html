@@ -1,10 +1,10 @@
 ---
-title: コラム
-permalink: /column
+title: メモのタイムライン
+permalink: /memo
 ---
 
 {% assign tag_names = "" | split: "|" %} {% for posts_by_tag in site.tags %} {%
-if posts_by_tag.first == "column" %} {% assign tag_names = tag_names | push:
+if posts_by_tag.first == "memo" %} {% assign tag_names = tag_names | push:
 posts_by_tag.first %} {% endif %} {% endfor %} {% assign tag_names = tag_names |
 sort %}
 
@@ -15,12 +15,12 @@ sort %}
   <hr />
   <div>
     {% for post in site.tags[tag_name] %}
-    <div class="column">
-      <a class="column-title" href="{{ post.url | prepend: baseurl }}"
+    <div class="memo">
+      <a class="memo-title" href="{{ post.url | prepend: baseurl }}"
         >{{ post.title | replace: " ", "-" }}</a
       >
-      <div class="column-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
-      <div class="column-contents">{{ post.excerpt }}</div>
+      <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
+      <div class="memo-contents">{{ post.excerpt }}</div>
       <hr />
     </div>
     {% endfor %}

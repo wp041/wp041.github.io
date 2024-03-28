@@ -9,7 +9,7 @@ permalink: /about
 - 文書群1: マジメに書いた文章、大体文字数が1万字弱
   - e.g. [令和推し論]({{site.baseurl}}/article/令和推し論)
 - 文書群2: 駄文短文、長期保存の効くツイートみたいなもの、
-  - [駄文短文一覧]({{site.baseurl}}/column)から見れる
+  - [駄文短文一覧]({{site.baseurl}}/memo)から見れる
 
 
 
