@@ -5,15 +5,16 @@ layout: default
 <div class="article">
   <h1>{{ page.title }}</h1>
 
-  {% include post-meta.html %} {{ content }}
+  {% include post-meta.jekyll %} {{ content }}
 </div>
 <div class="footer">
-  <small
-    >この記事をシェア……する？：<a
-      href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-      class="twitter-share-button"
-      data-show-count="false"
-      >Tweet用リンク</a
-    >
-  </small>
+  <p
+    >この記事をシェア……する？：<a href="https://twitter.com/share?url={{site.baseurl}}/{{page.url}}&amp;text={{page.title}} 白書オオキのサイト" rel="nofollow" target="_blank" class="my-twitter-share-button">Twitterでシェア</a>
+  </p>
+  <p>
+    編集履歴は<a
+      href="https://github.com/wp041/wp041.github.io/commits/main/_posts/{{ date | date: "%Y-%m-%d" }}-{{page.title}}.md"
+      >ここ</a
+    >から見れます
+  </p>
 </div>

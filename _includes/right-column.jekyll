@@ -1,0 +1,25 @@
+<div class="where">
+  このブログはjekyllで構築されてて、ソースコードは<a href="https://github.com/wp041/wp041.github.io">ここ</a>で見ることができます。
+  <br/>
+  <br/>
+  なんか問い合わせとか文句あったらメールして：041.whitepaper@gmail.comあるいは
+  <a href="https://twitter.com/wp_041">twitter</a>
+  のDMとかでも良いよ<br/><br/>
+  あとこれ、<a href="/feed.xml">RSSフィード</a>だよ。あげる（登録すると通知が届く）
+  <p>＿人人人人人人人人人人人人人人人人人＿</p>
+  <p>＞　一緒に同人制作活動する人募集中　＜</p>
+  <p>￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣</p>
+</div>
+<div class="random">
+  新着テキスト↓
+  {% for post in site.posts limit: 1 where post.tags contains 'memo' %}
+    <h2>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    {{ post.excerpt }}({{ post.date | date: "%Y-%m-%d" }})
+    <a href="{{ site.baseurl}}/memo">もっとみる⤴️</a>
+  {% endfor %}
+</div>
+<div class="logo">
+  <img src="/assets/images/wp-logo.svg" alt="ロゴ" />
+</div>

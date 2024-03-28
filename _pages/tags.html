@@ -5,18 +5,13 @@ permalink: /tags
 
 <h1>{{ page.title }}</h1>
 
-このサイトの記事に含まれるタグ一覧 {% assign tag_names = "" | split: "|" %} {%
-for posts_by_tag in site.tags %} {% assign tag_names = tag_names | push:
-posts_by_tag.first %} {% endfor %} {% assign tag_names = tag_names | sort %} {%
-include tag-cloud.html tag_names=tag_names %}
+<h2>このサイトの記事に含まれるタグ一覧</h2>
+{% include tag-cloud.jekyll tag_names=tag_names %}
 
 <section class="posts-by-tags">
   {% for tag_name in tag_names %}
   <div>
-    <h3 id="{{ tag_name }}">
-      {{ tag_name | replace: "_", " " }}のタグが付いた記事一覧
-    </h3>
-
+    <h3 id="tag-name">{{ tag_name }}のタグが付いた記事一覧</h3>
     <ul>
       {% for post in site.tags[tag_name] %}
       <li>
@@ -27,3 +22,33 @@ include tag-cloud.html tag_names=tag_names %}
   </div>
   {% endfor %}
 </section>
+<!-- 
+<h1>あるいは</h1>
+
+{% assign sorted_tags = (site.tags | sort:0) %}
+<ul class="tag-box">
+  {% for tag in sorted_tags %} {% assign t = tag | first %} {% assign posts =
+  tag | last %}
+  <li>
+    <a href="#{{ t | downcase }}"
+      >{{ t }} <span class="size">({{ posts.size }})</span></a
+    >
+  </li>
+  {% endfor %}
+</ul>
+
+{% for tag in sorted_tags %} {% assign t = tag | first %} {% assign posts = tag
+| last %}
+
+<h4 id="{{ t | downcase }}">{{ t }}</h4>
+<ul>
+  {% for post in posts %} {% if post.tags contains t %}
+  <li>
+    <span class="date">{{ post.date | date: '%d %b %y' }}</span>:
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endif %} {% endfor %}
+</ul>
+{% endfor %}
+
+Listing posts by tag template from http://github.com/cagrimmett/jekyll-tools -->

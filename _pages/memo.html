@@ -3,15 +3,14 @@ title: メモのタイムライン
 permalink: /memo
 ---
 
-{% assign tag_names = "" | split: "|" %} {% for posts_by_tag in site.tags %} {%
-if posts_by_tag.first == "memo" %} {% assign tag_names = tag_names | push:
-posts_by_tag.first %} {% endif %} {% endfor %} {% assign tag_names = tag_names |
-sort %}
+{% include memo-list.jekyll %}
 
 <section class="posts-by-tags">
   {% for tag_name in tag_names %}
   <h1>{{ page.title }}</h1>
-  <p>メモ的なのをここに投げるよ！（短文でツイッターみたいな使い方したい）</p>
+  <p>
+    メモ的なのをここに投げるよ！（短文でツイッターみたいな使い方したい）<br />つまり、ここには「メモ」というタグがついた文章を表示しています
+  </p>
   <hr />
   <div>
     {% for post in site.tags[tag_name] %}
