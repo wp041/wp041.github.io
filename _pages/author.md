@@ -6,7 +6,7 @@ title: 作者
 # {{ page.title }}
 ブログのメンバーを紹介するぜ！ 白書オオキ
 
-![白書オオキの写真]({{site.baseurl}}/assets/images/author.png)
+![白書オオキの写真]({{site.baseurl}}/assets/images/author.gif)
 
 
 ## 賞等
