@@ -1,6 +1,13 @@
-body {
-  background-color: #f9f9f4;
+body:not(:has(.index)) {
+  // background-color: #F9F9F4;
+  background-color: rgba(250, 250, 245, 0.88);
+  background-image: url("/assets/images/ミァハイラスト - トリミング.png");
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-position: 60% 35%;
+  background-repeat: no-repeat;
 }
+
 body:has(.index) {
   // background-color: #F9F9F4;
   background-color: #8e8e8e;
@@ -22,11 +29,13 @@ body:has(.index) {
 a:visited {
   color: #0500ff;
 }
+
 hr {
   border: none;
   border-top: 1px solid #0500ff;
   margin: 1em auto;
 }
+
 // 大体の設定
 
 .left-column {
@@ -35,10 +44,12 @@ hr {
   position: fixed;
   top: 42%;
 }
+
 .nav {
   font-size: 0.9rem;
   padding-left: 10%;
 }
+
 .credit {
   font-size: 0.7rem;
   font-weight: 300;
@@ -63,12 +74,14 @@ hr {
   position: fixed;
   right: 0;
 }
+
 .where {
   font-size: 0.7rem;
   padding: 3px;
   position: fixed;
   top: 2%;
 }
+
 .random {
   position: fixed;
   padding: 3px;
@@ -76,10 +89,12 @@ hr {
   line-height: 1.15em;
   text-align: justify;
   padding-right: 0.5%;
+
   img {
     width: 100%;
   }
 }
+
 .logo img {
   padding: 0.5em;
   height: 3em;
@@ -93,6 +108,7 @@ h1 {
   font-weight: 900;
   font-size: 16px;
 }
+
 h2,
 h3,
 h4,
@@ -102,13 +118,16 @@ h6 {
   font-size: 15px;
   font-weight: 700;
 }
+
 ul {
   list-style-type: "-   ";
   margin-bottom: 0.5em;
 }
+
 .post-meta {
   text-align: right;
 }
+
 .footer {
   padding-top: 30%;
 }
@@ -121,16 +140,20 @@ ul {
 .memo hr {
   margin: 2em 0 2em 0;
 }
+
 .memo img {
   width: 100%;
 }
+
 .memo-title {
   font-weight: 700;
 }
+
 .memo-date {
   font-size: 0.8em;
   float: right;
 }
+
 .memo-contents {
   line-height: 1.4em; //行間
   font-size: 0.8em;
