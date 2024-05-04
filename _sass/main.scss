@@ -67,6 +67,8 @@ hr {
   position: fixed;
   padding: 3px;
   bottom: 0;
+  max-width: 80%;
+  padding-right: 3em;
 }
 
 .center-column {
@@ -98,7 +100,7 @@ hr {
 
 .logo img {
   padding: 0.5em;
-  height: 3em;
+  height: 2em;
   position: fixed;
   right: 0;
   bottom: 0;

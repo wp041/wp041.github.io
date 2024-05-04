@@ -17,6 +17,3 @@
     <a href="{{ site.baseurl}}/memo">もっとみる⤴️</a>
   {% endfor %}
 </div>
-<div class="logo">
-  <img src="/assets/images/wp-logo.svg" alt="ロゴ" />
-</div>

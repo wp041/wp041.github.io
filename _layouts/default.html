@@ -55,8 +55,10 @@
 <body>
   <div class="main">
     <div class="left-column">{% include left-column.jekyll %}</div>
-    <div class="center-column">{{ content }}</div>
+    {% include credit.jekyll %}
+    <div class="center-column"> {{ content }}</div>
     <div class="right-column">{% include right-column.jekyll %}</div>
+    {% include logo.jekyll %}
   </div>
 </body>
 
