@@ -2,9 +2,9 @@
   link: /
 - name: このサイトの概要
   link: /about
-- name: しっかりとした文章一覧
-  link: /article
 - name: 駄文短文一覧
   link: /memo
+- name: しっかりとした文章一覧
+  link: /article
 - name: タグ（トピック）で投稿をソート
   link: /tags
