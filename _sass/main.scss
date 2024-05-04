@@ -41,11 +41,7 @@ hr {
 // 大体の設定
 
 @media screen and (max-width: 599px) {
-
-  .right-column,
-  .left-column {
-    display: none;
-  }
+  @import "1-column";
 }
 
 @media screen and (min-width: 600px) {
@@ -70,8 +66,8 @@ hr {
 }
 
 .center-column {
-  padding-top: 14%;
   width: 100%;
+  padding-top: 14%;
   padding-bottom: 5%;
 }
 
