@@ -75,6 +75,11 @@ hr {
   width: 100%;
   padding-top: 14%;
   padding-bottom: 5%;
+  width: auto;
+
+  img {
+    max-height: 30em;
+  }
 }
 
 
@@ -135,17 +140,9 @@ ul {
   padding-top: 30%;
 }
 
-.article img {
-  width: 100%;
-}
-
 // コラムの設定
 .memo hr {
   margin: 2em 0 2em 0;
-}
-
-.memo img {
-  width: 100%;
 }
 
 .memo-title {
