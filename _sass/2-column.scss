@@ -1,13 +1,15 @@
 .right-column {
-    // position: fixed;
-    display: inline;
-    width: 16%;
-    font-size: 0.65rem;
-    height: 100%;
-    position: fixed;
-    right: 0;
+    display: none;
 }
 
 .left-column {
-    display: none;
+    display: inline;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 42%;
+}
+
+.center-column {
+    padding-left: 27%;
 }
