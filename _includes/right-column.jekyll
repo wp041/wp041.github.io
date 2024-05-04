@@ -9,11 +9,16 @@
 </div>
 <div class="random">
   新着テキスト↓
+  <br/>
+  <br/>
   {% for post in site.posts limit: 1 where post.tags contains 'memo' %}
     <h2>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="random-title">{{ post.title }}</a>
     </h2>
-    {{ post.excerpt }}({{ post.date | date: "%Y-%m-%d" }})
+    <br/>
+    {{ post.excerpt }}
+    <br/>
+    ({{ post.date | date: "%Y-%m-%d" }})
     <a href="{{ site.baseurl}}/memo">もっとみる⤴️</a>
   {% endfor %}
 </div>

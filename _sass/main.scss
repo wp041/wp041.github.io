@@ -28,6 +28,8 @@ body:has(.index) {
   font-weight: 450;
 }
 
+// 要素のデフォ設定
+
 a:visited {
   color: #0500ff;
 }
@@ -36,6 +38,28 @@ hr {
   border: none;
   border-top: 1px solid #0500ff;
   margin: 1em auto;
+}
+
+
+// 記事の設定
+h1 {
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: "-   ";
+  margin-bottom: 0.5em;
 }
 
 // 大体の設定
@@ -84,6 +108,21 @@ hr {
   text-align: justify;
   padding-right: 0.5%;
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul {
+
+    margin: 0% !important;
+  }
+
+  .random-title {
+    font-size: 0.9rem;
+  }
+
   img {
     width: 100%;
   }
@@ -97,26 +136,6 @@ hr {
   bottom: 0;
 }
 
-// 記事の設定
-h1 {
-  font-weight: 900;
-  font-size: 1.1em;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.1em;
-  font-size: 1em;
-  font-weight: 700;
-}
-
-ul {
-  list-style-type: "-   ";
-  margin-bottom: 0.5em;
-}
 
 .post-meta {
   text-align: right;
@@ -168,6 +187,7 @@ ul {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 6s linear infinite;
+  width: 100%;
 }
 
 @keyframes marquee {
