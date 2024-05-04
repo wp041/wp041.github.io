@@ -44,18 +44,6 @@ hr {
   display: none;
 }
 
-@media screen and (max-width: 599px) {
-  @import "1-column";
-}
-
-@media screen and (min-width: 600px) {
-  @import "2-column";
-}
-
-@media screen and (min-width: 1280px) {
-  @import "3-column";
-}
-
 .nav {
   font-size: 0.9rem;
   padding-left: 1em;
@@ -78,8 +66,13 @@ hr {
   width: auto;
 
   img {
+    width: 100%;
     max-height: 30em;
+    width: auto;
+    height: auto;
   }
+
+
 }
 
 
@@ -193,4 +186,19 @@ ul {
   100% {
     transform: translate(-100%);
   }
+}
+
+//レスポンシブ・デザイン
+
+
+@media screen and (max-width: 599px) {
+  @import "1-column";
+}
+
+@media screen and (min-width: 600px) {
+  @import "2-column";
+}
+
+@media screen and (min-width: 1280px) {
+  @import "3-column";
 }
