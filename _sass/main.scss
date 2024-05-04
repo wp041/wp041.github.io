@@ -67,6 +67,10 @@ img {
   filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(107%) saturate(1600%);
 }
 
+p :hover {
+  filter: none;
+}
+
 // 大体の設定
 
 .menu-btn {
