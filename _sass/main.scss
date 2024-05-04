@@ -1,3 +1,5 @@
+//スマホ向け
+
 body:not(:has(.index)) {
   // background-color: #F9F9F4;
   background-color: rgba(250, 250, 245, 0.88);
@@ -38,11 +40,20 @@ hr {
 
 // 大体の設定
 
-.left-column {
-  height: 100%;
-  width: 20%;
-  position: fixed;
-  top: 42%;
+@media screen and (max-width: 599px) {
+
+  .right-column,
+  .left-column {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @import "2-column";
+}
+
+@media screen and (min-width: 1280px) {
+  @import "3-column";
 }
 
 .nav {
@@ -66,14 +77,6 @@ hr {
   padding-bottom: 5%;
 }
 
-.right-column {
-  // position: fixed;
-  width: 16%;
-  font-size: 0.65rem;
-  height: 100%;
-  position: fixed;
-  right: 0;
-}
 
 .where {
   font-size: 0.7rem;
