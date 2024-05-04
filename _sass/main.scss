@@ -40,6 +40,10 @@ hr {
 
 // 大体の設定
 
+.menu-btn {
+  display: none;
+}
+
 @media screen and (max-width: 599px) {
   @import "1-column";
 }
