@@ -1,9 +1,9 @@
 <nav>
   <div class="nav">
-    <marquee>⚠️⚠️このサイトは立ち上げ中です⚠️⚠️</marquee>
-  </div>
-  {% for item in site.data.navigation %}
-    <div class="nav">
+    <div class="marquee">
+      <div class="marquee-text">⚠️⚠️このサイトは立ち上げ中です⚠️⚠️</div>
+    </div>
+    {% for item in site.data.navigation %}
       <p>
         <a
           href="{{ item.link }}"
@@ -13,6 +13,6 @@
           {{ item.name }}
         </a>
       </p>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </nav>

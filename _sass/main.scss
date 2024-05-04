@@ -58,7 +58,7 @@ hr {
 
 .nav {
   font-size: 0.9rem;
-  padding-left: 10%;
+  padding-left: 1em;
 }
 
 .credit {
@@ -174,4 +174,26 @@ ul {
   line-height: 100%;
   font-weight: 100;
   overflow-wrap: anywhere;
+}
+
+// 疑似marquee
+.marquee {
+  padding: 1em 0;
+  overflow: hidden;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 6s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
 }
