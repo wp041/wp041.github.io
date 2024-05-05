@@ -62,6 +62,18 @@ ul {
   margin-bottom: 0.5em;
 }
 
+pre {
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  /* 角丸 */
+  padding: 0.25rem;
+  width: 90%;
+  margin: 0.25em auto;
+  white-space: pre-wrap;
+  font-size: 0.9em;
+  /* はみ出たときに折り返す */
+}
 
 img {
   filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(107%) saturate(1600%);
@@ -126,6 +138,7 @@ p :hover {
   * {
 
     margin: 0% !important;
+    border: none;
   }
 
   .random-title {
