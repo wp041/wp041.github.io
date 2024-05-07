@@ -3,10 +3,34 @@ title: 記事
 permalink: /article
 ---
 
+
+{% assign tag_names = "" | split: "|" %}
+{% for posts_by_tag in site.tags %}
+{% if posts_by_tag.first == "essay" %}
+{% assign tag_names = tag_names | push:
+posts_by_tag.first %}
+{% endif %}
+{% endfor %}
+{% assign tag_names = tag_names |
+sort %}
+
+
 <h1>{{ page.title }}</h1>
 
 <h1>上の方が最新投稿！</h1>
 
-<a href="{{site.baseurl}}{% post_url 2023-09-15-令和推し論 %}"
-  >2023-09-15-令和推し論</a
->
+<section class="posts-by-tags">
+  {% for tag_name in tag_names %}
+  <hr />
+  <div>
+    {% for post in site.tags[tag_name] %}
+    <div class="memo">
+      <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title | replace: " ", "-" }}</a>
+      <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
+      <div class="memo-contents">{{ post.excerpt }}</div>
+      <hr />
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>

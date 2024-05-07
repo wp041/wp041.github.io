@@ -4,7 +4,7 @@
   link: /about
 - name: 駄文短文一覧
   link: /memo
-- name: しっかりとした文章一覧
+- name: 比較的しっかりとした文章一覧
   link: /article
 - name: タグ（トピック）で投稿をソート
   link: /tags
