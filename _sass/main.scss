@@ -148,6 +148,14 @@ p :hover {
   img {
     width: 100%;
   }
+
+  .random-content {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 40;
+    /* 任意の行数を指定 */
+  }
 }
 
 .logo img {

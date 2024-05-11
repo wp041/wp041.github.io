@@ -11,14 +11,17 @@
   新着テキスト↓
   <br/>
   <br/>
-  {% for post in site.posts limit: 1 where post.tags contains 'memo' %}
-    <h2>
-      <a href="{{ post.url }}" class="random-title">{{ post.title }}</a>
-    </h2>
-    <br/>
-    {{ post.excerpt }}
-    <br/>
-    ({{ post.date | date: "%Y-%m-%d" }})
-    <a href="{{ site.baseurl}}/memo">もっとみる⤴️</a>
-  {% endfor %}
+  <div class="random-content">
+    {% for post in site.posts limit: 1 where post.tags contains 'memo' %}
+
+      <h2>
+        <a href="{{ post.url }}" class="random-title">{{ post.title }}</a>
+      </h2>
+      <br/>
+      {{ post.excerpt }}
+      <br/>
+      </div>
+      ({{ post.date | date: "%Y-%m-%d" }})
+    {% endfor %}
+  <a href="{{ site.baseurl}}/memo">もっとみる⤴️</a>
 </div>
