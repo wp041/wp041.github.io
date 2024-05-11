@@ -75,18 +75,23 @@ pre {
   /* はみ出たときに折り返す */
 }
 
+
 img {
   filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(107%) saturate(1600%);
+  // filter: sepia(100%) hue-rotate(201.2deg) brightness(107%) contrast(107%) saturate(1600%);
+  // filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
+  max-width: 50%;
+  transition: max-width 0.5s ease;
 }
 
-p :hover {
+div :hover {
   filter: none;
+  max-width: 100%;
 }
 
-.article img {
-
-  filter: none;
-}
+// .article img {
+// filter: none;
+// }
 
 
 // 大体の設定
