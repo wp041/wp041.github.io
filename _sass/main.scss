@@ -227,7 +227,12 @@ div :hover {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 6s linear infinite;
+  min-width: 21em;
   width: 100%;
+}
+
+.marquee :hover {
+  animation: marquee 2s linear infinite, rotation1 0.5s linear infinite;
 }
 
 @keyframes marquee {
@@ -237,6 +242,44 @@ div :hover {
 
   100% {
     transform: translate(-100%);
+  }
+}
+
+@keyframes rotation1 {
+  0% {
+    background: orange;
+  }
+
+  12.5% {
+    background: red;
+  }
+
+  25% {
+    background: pink;
+  }
+
+  37.5% {
+    background: purple;
+  }
+
+  50% {
+    background: blue;
+  }
+
+  62.5% {
+    background: lightblue;
+  }
+
+  75% {
+    background: green;
+  }
+
+  87.5% {
+    background: greenyellow;
+  }
+
+  100% {
+    background: yellow;
   }
 }
 
