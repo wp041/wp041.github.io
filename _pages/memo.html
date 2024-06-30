@@ -11,17 +11,13 @@ permalink: /memo
   <p>
     メモ的なのをここに投げるよ！（短文でツイッターみたいな使い方したい）<br />つまり、ここには「メモ」というタグがついた文章を表示しています
   </p>
-  <hr />
-  <div>
+  <div class="memo">
+    <hr />
     {% for post in site.tags[tag_name] %}
-    <div class="memo">
-      <a class="memo-title" href="{{ post.url | prepend: baseurl }}"
-        >{{ post.title | replace: " ", "-" }}</a
-      >
-      <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
-      <div class="memo-contents">{{ post.excerpt }}</div>
-      <hr />
-    </div>
+    <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title | replace: " ", "-" }}</a>
+    <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
+    <div class="memo-contents">{{ post.excerpt }}</div>
+    <hr />
     {% endfor %}
   </div>
   {% endfor %}
