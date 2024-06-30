@@ -7,26 +7,29 @@
       "previewPath": null,
       "fields": [
         {
-          "title": "Last modified date",
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "updated",
           "name": "updated",
-          "type": "datetime",
-          "isModifiedDate": true,
-          "dateFormat": "yyyy-MM-dd"
+          "type": "datetime"
         },
         {
-          "title": "Article preview",
+          "title": "preview",
           "name": "preview",
-          "type": "image"
+          "type": "string"
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
+          "title": "tags",
           "name": "tags",
-          "default": "memo"
+          "type": "tags"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
         }
       ]
     }
