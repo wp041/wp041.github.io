@@ -7,11 +7,6 @@
       "previewPath": null,
       "fields": [
         {
-          "title": "title",
-          "name": "title",
-          "type": "string"
-        },
-        {
           "title": "updated",
           "name": "updated",
           "type": "datetime"
@@ -27,8 +22,8 @@
           "type": "tags"
         },
         {
-          "title": "type",
-          "name": "type",
+          "title": "description",
+          "name": "description",
           "type": "string"
         }
       ]
