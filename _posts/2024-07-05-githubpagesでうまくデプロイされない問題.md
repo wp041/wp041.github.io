@@ -1,9 +1,9 @@
 ---
 updated: 2024-07-05T03:12:49.558Z
-preview: ""
 tags:
     - memo
 description: githubpagesでうまくデプロイされない問題
+preview: ""
 type: default
 ---
 正直いまでもよくわかっていない、が、yamlの中にtitileというメタデータが入ってるとjekyllのコードのなかで処理されないっぽい？
