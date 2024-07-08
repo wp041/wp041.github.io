@@ -1,10 +1,10 @@
-- name: トップページ
+- name: トップ
   link: /
-- name: このサイトの概要
+- name: 概要
   link: /about
 - name: 駄文短文一覧（おすすめ）
   link: /memo
 - name: 比較的しっかりとした文章一覧
   link: /article
-- name: タグで投稿をソート
+- name: タグソート
   link: /tags
