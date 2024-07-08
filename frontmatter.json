@@ -2,6 +2,46 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.taxonomy.contentTypes": [
     {
+      "name": "memo",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Publishing date",
+          "name": "created",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "updated",
+          "name": "updated",
+          "type": "datetime"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags",
+          "default": "memo"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    },
+    {
       "name": "default",
       "pageBundle": false,
       "previewPath": null,
@@ -27,69 +67,18 @@
           "type": "string"
         }
       ]
-    },
-    {
-      "name": "memo",
-      "pageBundle": false,
-      "previewPath": null,
-      "fields": [
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        },
-        {
-          "title": "updated",
-          "name": "updated",
-          "type": "datetime"
-        },
-        {
-          "title": "type",
-          "name": "type",
-          "type": "string"
-        }
-      ]
     }
   ],
   "frontMatter.framework.id": "jekyll",
   "frontMatter.content.publicFolder": "assets",
   "frontMatter.content.pageFolders": [
     {
-      "title": "drafts",
-      "path": "[[workspace]]/_drafts"
+      "title": "posts",
+      "path": "[[workspace]]/_posts"
     },
     {
-      "title": "posts",
-      "path": "[[workspace]]/_posts",
-      "filePrefix": null,
-      "previewPath": "'/{{fm.type}}/{{fm.pubDate|format:dd/MM/yy}}/'"
+      "title": "drafts",
+      "path": "[[workspace]]/_drafts"
     }
   ],
   "frontMatter.git.enabled": true,
