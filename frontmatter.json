@@ -39,9 +39,9 @@
           "default": "memo"
         },
         {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
+          "title": "Keywords",
+          "name": "keywords",
+          "type": "tags"
         }
       ]
     },

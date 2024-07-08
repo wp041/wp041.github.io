@@ -1,16 +1,27 @@
 {% if post %}
-  {% assign date = post.date %} {% assign tags = post.tags %}
+  {% assign date = post.date %} {% assign created = page.created %} {% assign updated = page.updated %} {% assign tags = post.tags %} {% assign keywords = page.keywords %}
 {% else %}
-  {% assign date = page.date %} {% assign tags = page.tags %}
+  {% assign date = page.date %} {% assign created = page.created %} {% assign updated = page.updated %} {% assign tags = page.tags %} {% assign keywords = page.keywords %}
 {% endif %}
 
 <span class="post-meta">
-  <div class="post-date">{{ date | date: "%Y-%m-%d" }}</div>
+  <div class="post-date">published: {{ date | date: "%Y-%m-%d" }}</div>
+  <div class="post-date">created: {{ created | date: "%Y-%m-%d" }}</div>
+  <div class="post-date">updated: {{ updated | date: "%Y-%m-%d" }}</div>
   <div class="post-tags">
+    tag:
     {% for tag in tags %}
       <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}">
         {{ tag }}
       </a>
+    {% endfor %}
+  </div>
+  <div class="post-keywords">
+    keywords:
+    {% for keywords in keywords %}
+      {% comment %} <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}"> {% endcomment %}
+      {{ keywords }}
+      {% comment %} </a> {% endcomment %}
     {% endfor %}
   </div>
 </span>
