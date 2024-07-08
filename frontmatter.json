@@ -7,6 +7,10 @@
       "previewPath": null,
       "fields": [
         {
+          "title": "type",
+          "name": "type"
+        },
+        {
           "title": "Description",
           "name": "description",
           "type": "string"

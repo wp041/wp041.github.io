@@ -1,5 +1,5 @@
 {
-  "frontMatter.dashboard.openOnStart": false,
+  "frontMatter.dashboard.openOnStart": true,
   "[markdown]": {
   }
 }
