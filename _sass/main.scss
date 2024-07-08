@@ -126,6 +126,20 @@ div :hover {
 }
 
 
+.content {
+  padding-bottom: 30%;
+}
+
+.footer {
+  padding: 3px;
+  font-size: 0.7rem;
+}
+
+
+.footer-info {
+  padding-top: 10%;
+}
+
 .where {
   padding: 3px;
   position: fixed;
@@ -181,9 +195,6 @@ div :hover {
 // .post-tags {
 // }
 
-.footer {
-  padding-top: 30%;
-}
 
 // コラムの設定
 .memo hr {

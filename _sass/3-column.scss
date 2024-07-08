@@ -2,6 +2,7 @@
     display: none;
 }
 
+
 .right-column {
     // position: fixed;
     display: inline;
@@ -12,15 +13,20 @@
     right: 0;
 }
 
+.center-column {
+    padding-right: 25%;
+    min-width: 48%;
+    padding-left: 27%;
+}
+
+.footer-info {
+    display: none;
+}
+
 .left-column {
     display: inline;
     height: 100%;
     width: 20%;
     position: fixed;
     top: 42%;
-}
-
-.center-column {
-    padding-right: 25%;
-    padding-left: 27%;
 }

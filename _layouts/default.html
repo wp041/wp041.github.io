@@ -72,7 +72,9 @@
   <div class="main">
     <div class="left-column">{% include left-column.jekyll %}</div>
     {% include credit.jekyll %}
-    <div class="center-column"> {{ content }}</div>
+    <div class="center-column">
+      <div class="content">{{ content }}</div> {% include center-column-footer.jekyll %}
+    </div>
     <div class="right-column">{% include right-column.jekyll %}</div>
     {% include logo.jekyll %}
   </div>

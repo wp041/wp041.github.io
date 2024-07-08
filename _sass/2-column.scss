@@ -6,14 +6,15 @@
     display: none;
 }
 
+.center-column {
+    padding-left: 27%;
+}
+
+
 .left-column {
     display: inline;
     height: 100%;
     width: 20%;
     position: fixed;
     top: 42%;
-}
-
-.center-column {
-    padding-left: 27%;
 }
