@@ -7,6 +7,9 @@ updated: 2024-07-14T17:43:42.167Z
 tags: memo
 keywords: []
 ---
+[レイヤーフォルダ開閉をショートカットで行いたいです | CLIP STUDIO PAINTのみんなに聞いてみよう | CLIP STUDIO](https://www.clip-studio.com/clip_site/support/help/detail/svc/53/tid/72515)
+絶望、ということで作りました
+
 みんなが欲しかったのはこれだよな？
 
 ## 使い方
