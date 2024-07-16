@@ -46,6 +46,51 @@
       ]
     },
     {
+      "name": "diary",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "type",
+          "name": "type"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Publishing date",
+          "name": "created",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "updated",
+          "name": "updated",
+          "type": "datetime"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags",
+          "default": "memo"
+        },
+        {
+          "title": "Keywords",
+          "name": "keywords",
+          "type": "tags"
+          "default": "日記"
+        }
+      ]
+    },
+    {
       "name": "default",
       "pageBundle": false,
       "previewPath": null,
