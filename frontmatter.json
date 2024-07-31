@@ -85,7 +85,7 @@
         {
           "title": "Keywords",
           "name": "keywords",
-          "type": "tags"
+          "type": "tags",
           "default": "日記"
         }
       ]
