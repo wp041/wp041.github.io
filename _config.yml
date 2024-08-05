@@ -12,10 +12,10 @@
 # これらは新しいサイトをパーソナライズするために使われます。HTMLファイルを見ると, {{ site.title }}, {{ site.email }} などでアクセスできることがわかります.
 # お望みのカスタム変数を作成することができ, テンプレートから {{ site.myvariable }}経由でアクセスすることができます.
 
-title: 白書オオキ白書（仮）
+title: 白書大木
 email: 041.whitepaper@gmail.com
 description: >- # これは "baseurl: "までの改行を無視することを意味する。
-  白書オオキのブログ。臨界点に達し、そしてhtmlがあった。
+  白書大木のブログ。臨界点に達し、そしてhtmlがあった。
 author: Oki Whitepaper
 twitter_username: wp_041
 github_username: wp041
