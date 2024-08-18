@@ -4,9 +4,9 @@ title: 作者
 ---
 
 # {{ page.title }}
-ブログのメンバーを紹介するぜ！ 白書オオキ
+ブログのメンバーを紹介するぜ！ 白書大木
 
-![白書オオキの写真]({{site.baseurl}}/assets/images/author.gif)
+![白書大木の写真]({{site.baseurl}}/assets/images/author.gif)
 
 
 ## 賞等

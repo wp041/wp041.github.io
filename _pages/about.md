@@ -14,7 +14,7 @@ permalink: /about
   - [駄文短文一覧]({{site.baseurl}}/memo)から見れる
 
 ## そのた
-著者：[白書オオキ]({{site.baseurl}}/author)
+著者：[白書大木]({{site.baseurl}}/author)
 
 意図：
 取り敢えずプラットフォームを自分で掌握しなければとの強い念があり、それが臨界点に達し、そして html があった。

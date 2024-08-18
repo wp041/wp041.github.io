@@ -12,12 +12,24 @@ permalink: /memo
     メモ的なのをここに投げるよ！（短文でツイッターみたいな使い方したい）<br />つまり、ここには「メモ」というタグがついた文章を表示しています
   </p>
   <div class="memo">
-    <hr />
+    <!-- <hr /> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     {% for post in site.tags[tag_name] %}
     <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title | replace: " ", "-" }}</a>
     <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
     <div class="memo-contents">{{ post.excerpt }}</div>
-    <hr />
+    <!-- <hr /> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     {% endfor %}
   </div>
   {% endfor %}
