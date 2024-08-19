@@ -119,7 +119,10 @@
     }
   ],
   "frontMatter.framework.id": "jekyll",
-  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.content.publicFolder": {
+    "path": "assets/images",
+    "relative": true
+  },
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
