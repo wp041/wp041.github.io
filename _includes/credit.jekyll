@@ -1,7 +1,4 @@
 <div class="credit">
-  <div class="marquee-area">
-    <div class="marquee">{% include notification.jekyll %}</div>
-  </div>
   ©2024 Oki Whitepaper. ALL Rights Reserved
   <br>
   Reproduction, reposting ormodification of the contentof this site is prohibited.
