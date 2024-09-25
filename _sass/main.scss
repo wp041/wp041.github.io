@@ -119,7 +119,8 @@ div.center-column :hover {
   font-weight: 300;
   position: fixed;
   padding: 3px;
-  bottom: 0;
+  bottom: 0.25rem;
+  left: 0.5rem;
   max-width: 80%;
   padding-right: 3em;
   z-index: 2;
@@ -188,11 +189,10 @@ div.center-column :hover {
 }
 
 .logo img {
-  padding: 0.5em;
   height: 2em;
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 0.5rem;
+  bottom: 0.5rem;
 }
 
 // post
@@ -243,23 +243,37 @@ div.center-column :hover {
   overflow-wrap: anywhere;
 }
 
+// .notification {
+//   width: 100%;
+// }
+
 // 疑似marquee
+
+// .marqueeでマーキー対象を指定
+// {{どのマーキーか指定}} .marqueeで文字数分マーキーエリアを指定
+
+.left-column .marquee {
+  min-width: 110%;
+  animation: marquee 6s linear infinite;
+}
+
+.credit .marquee {
+  min-width: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+// 指定終了
+
 .marquee {
-  padding: 1em 0;
+  display: inline-block;
+  white-space: nowrap;
+  // width: 100%;
+}
+
+.marquee-area {
   overflow: hidden;
 }
 
-.marquee-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 6s linear infinite;
-  min-width: 21em;
-  width: 100%;
-}
-
-.marquee :hover {
-  animation: marquee 2s linear infinite, rotation1 0.5s linear infinite;
-}
 
 @keyframes marquee {
   0% {
@@ -268,44 +282,6 @@ div.center-column :hover {
 
   100% {
     transform: translate(-100%);
-  }
-}
-
-@keyframes rotation1 {
-  0% {
-    background: orange;
-  }
-
-  12.5% {
-    background: red;
-  }
-
-  25% {
-    background: pink;
-  }
-
-  37.5% {
-    background: purple;
-  }
-
-  50% {
-    background: blue;
-  }
-
-  62.5% {
-    background: lightblue;
-  }
-
-  75% {
-    background: green;
-  }
-
-  87.5% {
-    background: greenyellow;
-  }
-
-  100% {
-    background: yellow;
   }
 }
 

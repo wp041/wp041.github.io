@@ -1,7 +1,9 @@
 <nav>
   <div class="nav">
-    <div class="marquee">
-      <div class="marquee-text">⚠️⚠️このサイトは立ち上げ中です⚠️⚠️</div>
+    <div class="marquee-area">
+      <div class="marquee">
+        {% include notification.jekyll %}
+      </div>
     </div>
     {% for item in site.data.navigation %}
       <p>

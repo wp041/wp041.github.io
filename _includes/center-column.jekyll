@@ -1,0 +1,7 @@
+<div class="center-column-header">
+  {% include center-column-header.jekyll %}
+</div>
+<div class="content">{{ content }}</div>
+<div class="center-column-footer">
+  {% include center-column-footer.jekyll %}
+</div>
