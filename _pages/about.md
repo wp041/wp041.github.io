@@ -8,10 +8,10 @@ permalink: /about
 ## 構造
 このブログには、主に 2 種類の文章があります
 
-- 文書群 1: マジメに書いた文章、大体文字数が 1 万字弱
-  - e.g. [令和推し論]({{site.baseurl}}/article/令和推し論)
+- 文書群 1: 長めの文章
+  - [長めの文章]({{site.baseurl}}/article)から見れる
 - 文書群 2: 駄文短文、長期保存の効くツイートみたいなもの、
-  - [駄文短文一覧]({{site.baseurl}}/memo)から見れる
+  - [短文一覧]({{site.baseurl}}/memo)から見れる
 
 ## そのた
 著者：[白書大木]({{site.baseurl}}/author)

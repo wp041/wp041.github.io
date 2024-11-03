@@ -6,7 +6,7 @@ permalink: /article
 
 {% assign tag_names = "" | split: "|" %}
 {% for posts_by_tag in site.tags %}
-{% if posts_by_tag.first == "essay" %}
+{% if posts_by_tag.first == "article" %}
 {% assign tag_names = tag_names | push:
 posts_by_tag.first %}
 {% endif %}

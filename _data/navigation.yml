@@ -2,9 +2,9 @@
   link: /
 - name: 概要
   link: /about
-- name: 駄文短文一覧（おすすめ）
+- name: 短文一覧（おすすめ）
   link: /memo
-- name: 比較的しっかりとした文章一覧
+- name: 長めの文章
   link: /article
-- name: タグソート
+- name: タグによる分類
   link: /tags
