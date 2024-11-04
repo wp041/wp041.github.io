@@ -23,9 +23,10 @@ google_analytics: G-B8H50J7XT4
 excerpt_separator: "<!--抜粋ここまで-->"
 
 future: true # これをするとなんかgithubpagesで困らない
-markdown: redcarpet
-redcarpet:
-  extensions: ["autolink", "hard_wrap"]
+kramdown:
+  input: GFM
+  autolink: true #これいらないかも
+  hard_wrap: true
 include:
   - _pages
 
