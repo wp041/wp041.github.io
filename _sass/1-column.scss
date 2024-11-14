@@ -4,7 +4,7 @@
 }
 
 .center-column {
-    padding-top: 14em;
+    padding-top: 10em;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -82,12 +82,34 @@
     opacity: 1;
 
     /*メニューを画面内へ*/
-    .left-column {
-        display: inline;
-        height: 100%;
+    .marquee-area {
         position: fixed;
-        top: 42%;
+        bottom: 32px;
+        right: -1px;
+        width: 100%;
+    }
+
+    .left-column {
+        display: block;
+        top: 100px;
+        width: auto;
+        text-align: right;
         color: #0500ff;
+
+        .nav {
+            padding-left: 0;
+        }
+
+
+        position: fixed;
+        right: 16px;
+        top: 100px;
+
+        .marquee {
+            animation: marquee 12s linear infinite;
+            min-width: 100%;
+
+        }
     }
 
 }
