@@ -19,13 +19,15 @@ body:has(.index) {
   background-repeat: no-repeat;
 }
 
-.main {
+:root {
   display: flex;
   color: #0500ff;
   line-height: 1.1em;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
   font-weight: 450;
+  // color: transparent;
+  // text-shadow: 0 0 0 #0500ff;
 }
 
 // 要素のデフォ設定
