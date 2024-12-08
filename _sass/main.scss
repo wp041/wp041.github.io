@@ -230,6 +230,12 @@ div.center-column :hover {
     width: 90%;
     margin: 0.25em auto;
   }
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 20;
+  /* 任意の行数を指定 */
 }
 
 // タグページ
