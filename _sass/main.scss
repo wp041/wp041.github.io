@@ -1,3 +1,8 @@
+// リセットCSS
+body {
+  margin: 0
+}
+
 //スマホ向け
 
 body:not(:has(.index)) {
