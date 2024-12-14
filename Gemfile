@@ -4,12 +4,12 @@ source "https://rubygems.org"
 
 # これで適切なバージョンのJekyllが動作していることを確認できます。
 # Happy Jekylling!
-# gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.3.3"
 
 # これは新しいJekyllサイトのデフォルトテーマです。お好きなものに変更してください。
 gem "minima", "~> 2.5"
 # GitHub Pagesを使いたい場合は、上の「gem "jekyll"」を削除し、下の行のコメントを外します。アップグレードするには、`bundle update github-pages` を実行してください。
-gem "github-pages", "~> 231", group: :jekyll_plugins
+gem 'github-pages', group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
