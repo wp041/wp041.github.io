@@ -24,5 +24,5 @@
       </div>
       ({{ post.date | date: "%Y-%m-%d" }})
     {% endfor %}
-  <a href="{{ site.baseurl}}/memo">もっとみる⤴️</a>
+  <a href="{{ site.baseurl}}/memo">もっとみる⤴</a>
 </div>
