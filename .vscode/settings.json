@@ -1,5 +1,226 @@
 {
-  "frontMatter.dashboard.openOnStart": true,
-  "[markdown]": {
-  }
+  "frontMatter.dashboard.openOnStart": false,
+  "[markdown]": {},
+  "Novel.editor.sceneNavigator": false,
+  "japanese-proofreading.textlint.助詞の連続": true,
+  "highlight.regexes": {
+    "(https?|ftp)(://[-_.!~*\\'()a-zA-Z0-9;/?:\\@&=+\\$,%#]+)": [
+      {
+        "color": "#2cc3ff"
+      },
+      {
+        "color": "#2cc3ff"
+      }
+    ],
+    "(h2■\\S+)": [
+      {
+        "color": "#d9ad00"
+      }
+    ],
+    "(ところ)": [
+      {
+        // 自作
+        "backgroundColor": "#0000ff44"
+      }
+    ],
+    "(といった|という|こと|など|実際|なんて|のような)": [
+      {
+        // cf. [VSCodeでさっくり作る快適な執筆環境。オススメ拡張機能3つ。｜リョウ](https://note.com/ryryo/n/n0ca42c3901d0)
+        "backgroundColor": "#ff8c0033"
+      }
+    ],
+    "(とても|すごく|だいたい|だから|でも|だけど|けれど|けど|どうやっても|どうしても|思う|かもしれない|と感じる|おもしろい|知りたい|意味がわかり|いっぱい|たくさん|沢山|した方が|無駄|嫌い|なかった|間違い|みんな)": [
+      {
+        // cf. [こう言い換えろ→論文に死んでも書いてはいけない言葉３０ 読書猿Classic: between / beyond readers](https://readingmonkey.blog.fc2.com/blog-entry-557.html)
+        "backgroundColor": "#ff220044"
+      }
+    ],
+    "(している|なって|かれている|見ると|見る|見た|見ていく|分かる|判る|解る|思われる|完全に|全く|ことができる|が、|関わらず|かかわらず|とても|顕著に|だから|なので|それで|しないといけない)": [
+      {
+        // cf. [室蘭工業大学　水素機能材料学研究室](https://u.muroran-it.ac.jp/hydrogen/thesis_express.html#:~:text=%EF%BC%95%20%E5%8F%A3%E8%AA%9E%E7%9A%84%E3%81%A7%E9%81%BF%E3%81%91%E3%82%8B%E8%A1%A8%E7%8F%BE%EF%BC%9A%20*%20%E3%80%8C%E3%81%A8%E3%81%A6%E3%82%82%E3%80%8D%E2%86%92%E3%80%8C%E9%A1%95%E8%91%97%E3%81%AB%E3%80%8D%20*%20%E3%80%8C%E3%81%A0%E3%81%8B%E3%82%89%E3%80%8D%E3%80%81%E3%80%8C%E3%81%9D%E3%82%8C%E3%81%A7%E3%80%8D%E3%80%81%E3%80%8C%E3%81%AA%E3%81%AE%E3%81%A7%E3%80%8D%E2%86%92%E3%80%8C%E5%BE%93%E3%81%A3%E3%81%A6%E3%80%8D%E3%80%81%E3%80%8C%E3%81%93%E3%81%AE%E3%81%9F%E3%82%81%E3%80%8D%E3%80%81%E3%80%8C%E3%81%9D%E3%81%AE%E3%81%9F%E3%82%81%E3%80%8D%20*%20%E3%80%8C%E3%80%9C%E3%81%97%E3%81%AA%E3%81%84%E3%81%A8%E3%81%84%E3%81%91%E3%81%AA%E3%81%84%E3%80%8D%E2%86%92%E3%80%8C%E3%80%9C%E3%81%99%E3%82%8B%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%82%E3%82%8B%E3%80%8D)
+        "backgroundColor": "#ff220044"
+      }
+    ],
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#ffcc00",
+          "backgroundColor": "#ffcc00",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#ffcc00",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#cc0000",
+          "backgroundColor": "#cc0000",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#cc0000",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#00ccff",
+          "backgroundColor": "#00ccff",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#00ccff",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#cc00cc",
+          "backgroundColor": "#cc00cc",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#cc00cc",
+          "color": "#1f1f1f"
+        }
+      ]
+    }
+  },
+  "highlight.decorations": {
+    "rangeBehavior": 3
+  },
+  "textlint.languages": [
+    "novel"
+  ],
+  "editor.semanticTokenColorCustomizations": {
+    // 今回、ライトは無視
+    // "[Default Dark+]": {
+    "enabled": true,
+    "rules": {
+      "noun": {
+        "foreground": "#b0d6ff"
+      },
+      "proper_noun": {
+        "foreground": "#5d8ffb"
+      },
+      "enum": {
+        "foreground": "#8fa4e9"
+      },
+      "suffix": {
+        "foreground": "#58ffab"
+      },
+      "personal_pronoun": {
+        "foreground": "#83c1ff"
+      },
+      "pronoun": {
+        "foreground": "#3a3afb",
+        "fontStyle": "bold"
+      },
+      "adverb": {
+        "foreground": "#fc9943"
+      },
+      "auailiary_verb": {
+        "foreground": "#ee74f2"
+      },
+      "verb": {
+        "foreground": "#ff7b72"
+      },
+      "adjective": {
+        "foreground": "#fec345"
+      },
+      "interjection": {
+        "foreground": "#ff9811",
+        "fontStyle": "bold"
+      },
+      "punctuation": {
+        "foreground": "#ffffff"
+      },
+      "bracket": {
+        "foreground": "#bcbcbcd3"
+      },
+      "bracket.quote": {
+        "foreground": "#a5a5a5d3"
+      },
+      "particle": {
+        "foreground": "#b1c4b1"
+      },
+      "*.quote": {
+        "foreground": "#b1bac4",
+        "italic": true,
+        "bold": true
+      },
+      "*.aozora": {
+        "foreground": "#b1bac4",
+        "italic": true
+      },
+      "bracket.aozora": {
+        "foreground": "#b1bac4"
+      },
+      "noun.dialogue": {
+        "foreground": "#a0a0a0"
+      },
+      "proper_noun.dialogue": {
+        "foreground": "#cacaca",
+        "fontStyle": "bold"
+      },
+      "enum.dialogue": {
+        "foreground": "#d4d4d4"
+      },
+      "suffix.dialogue": {
+        "foreground": "#cacaca"
+      },
+      "personal_pronoun.dialogue": {
+        "foreground": "#c8c8c8"
+      },
+      "pronoun.dialogue": {
+        "foreground": "#b6b6b6",
+        "fontStyle": "bold"
+      },
+      "punctuation.dialogue": {
+        "foreground": "#dcdcdc",
+        "fontStyle": "bold"
+      },
+      "bracket.dialogue": {
+        "foreground": "#cdcdcdd3",
+        "bold": true
+      },
+      "adverb.dialogue": {
+        "foreground": "#c1c1c1"
+      },
+      "auailiary_verb.dialogue": {
+        "foreground": "#c2c2c2"
+      },
+      "verb.dialogue": {
+        "foreground": "#a3a3a3"
+      },
+      "particle.dialogue": {
+        "foreground": "#c6c6c6"
+      },
+      "adjective.dialogue": {
+        "foreground": "#939393"
+      },
+      "interjection.dialogue": {
+        "foreground": "#dedede",
+        "fontStyle": "bold"
+      },
+      // }
+    }
+  },
+  "Novel.editor.semanticHighligting": false
 }

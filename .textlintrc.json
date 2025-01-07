@@ -1,0 +1,11 @@
+{
+  "plugins": {},
+  "filters": {},
+  "rules": {
+    "ja-no-redundant-expression": true,
+    "ja-no-weak-phrase": true,
+    "ja-unnatural-alphabet": true,
+    "no-doubled-joshi": true,
+    "preset-jtf-style": true
+  }
+}

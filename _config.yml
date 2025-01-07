@@ -34,6 +34,10 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - textlintrc.json
+  - package-lock.json
+  - node_modules
 
 defaults:
   # _posts

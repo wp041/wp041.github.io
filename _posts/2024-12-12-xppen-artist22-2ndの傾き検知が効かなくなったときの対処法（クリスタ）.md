@@ -3,7 +3,7 @@ type: ""
 description: ""
 preview: ""
 created: 2024-12-12T14:37:27.069Z
-updated: null
+updated: 2025-01-07T09:23:35.420Z
 tags: memo
 keywords: []
 fmContentType: memo
@@ -11,7 +11,7 @@ fmContentType: memo
 
 **結論**
 
-環境設定 > タブレット > タブレット設定-入力頻度 を「品質優先」にする
+`環境設定→タブレット→タブレット設定→入力頻度`を`品質優先`にする
 
 **環境**
 Win11
@@ -22,6 +22,7 @@ CLIP STUDIO PAINT EX
 
 2日ぶりに起動したら傾き検知が一切反応しなくなった
 色々検証した
+
 - イラストソフトを変える(clipstudio→photoshop)
 - ケーブルを変える
 - ドライバーをアップデートする
