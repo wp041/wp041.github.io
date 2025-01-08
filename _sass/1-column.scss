@@ -4,18 +4,19 @@
 }
 
 .center-column {
-    padding-top: 10em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-top: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
 }
 
 .menu-btn {
     position: fixed;
-    top: 1em;
-    right: 1em;
+    top: 1rem;
+    right: 1rem;
     display: flex;
-    height: 2em;
-    width: 2em;
+    height: 2rem;
+    width: 2rem;
     justify-content: center;
     align-items: center;
     z-index: 90;
