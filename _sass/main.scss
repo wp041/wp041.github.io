@@ -1,52 +1,52 @@
+// 変数の定義
+$main-color: #0500ff;
+$background-color: rgba(250, 250, 245, 0.88);
+$index-background-color: #8e8e8e;
+$font-family: "Noto Sans JP", "Noto Emoji", sans-serif;
+$font-size: 15px;
+$font-weight: 450;
+
 // リセットCSS
 body {
-  margin: 0
+  margin: 0;
 }
 
-//スマホ向け
-
+// スマホ向け
 body:not(:has(.index)) {
-  // background-color: #F9F9F4;
-  background-color: rgba(250, 250, 245, 0.88);
-  // background-image: url("/assets/images/ミァハイラスト - トリミング.png");
-  // background-blend-mode: lighten;
+  background-color: $background-color;
   background-attachment: fixed;
   background-position: 60% 35%;
   background-repeat: no-repeat;
 }
 
 body:has(.index) {
-  // background-color: #F9F9F4;
-  background-color: #8e8e8e;
+  background-color: $index-background-color;
   background-image: url("/assets/images/ミァハイラスト - トリミング.png");
   background-attachment: fixed;
   background-position: 60% 35%;
   background-repeat: no-repeat;
 }
 
-
+// メインスタイル
 .main {
-  // display: flex;
-  color: #0500ff;
+  color: $main-color;
   line-height: 1.1em;
-  font-family: "Noto Sans JP", "Noto Emoji", sans-serif;
-  font-size: 15px;
-  font-weight: 450;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
   font-optical-sizing: auto;
 }
 
 // 要素のデフォ設定
-
 a:visited {
-  color: #0500ff;
+  color: $main-color;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #0500ff;
+  border-top: 1px solid $main-color;
   margin: 1em auto;
 }
-
 
 // 記事の設定
 h1 {
@@ -70,48 +70,36 @@ ul {
 }
 
 pre {
-  border: solid;
-  border-width: 1px;
-  // border-radius: 1px;
-  /* 角丸 */
+  border: solid 1px;
   padding: 0.25rem;
   width: 90%;
   margin: 0.25em auto;
   white-space: pre-wrap;
   font-size: 0.9em;
-  /* はみ出たときに折り返す */
 }
 
-
-// img {
-// filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(107%) saturate(1600%);
-// filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
-// }
+// 画像フィルター設定
+div.center-column img,
+div.right-column img {
+  filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(125%) saturate(450%);
+}
 
 div.center-column img {
-  filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(125%) saturate(450%);
   max-width: 50%;
   transition: max-width 0.5s ease;
 }
 
 div.right-column img {
-  filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(125%) saturate(450%);
   max-height: 1rem;
   width: auto;
 }
 
-div.center-column :hover {
+div.center-column:hover img {
   filter: none;
   max-width: 100%;
 }
 
-// .article img {
-// filter: none;
-// }
-
-
 // 大体の設定
-
 .menu-btn {
   display: none;
 }
@@ -139,10 +127,8 @@ div.center-column :hover {
 
   img {
     width: 100%;
-    // max-height: 30em;←これじっそうしたい
   }
 }
-
 
 .content {
   padding-bottom: 30%;
@@ -152,11 +138,6 @@ div.center-column :hover {
   padding: 3px;
   font-size: 0.7rem;
 }
-
-
-// .footer-info {
-//   padding-top: 10%;
-// }
 
 .where {
   padding: 3px;
@@ -173,8 +154,7 @@ div.center-column :hover {
   padding-right: 0.5%;
 
   * {
-
-    margin: 0% !important;
+    margin: 0 !important;
     border: none;
   }
 
@@ -191,8 +171,8 @@ div.center-column :hover {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 40;
-    /* 任意の行数を指定 */
+    -webkit-line-clamp: 30;
+    line-clamp: 30;
   }
 }
 
@@ -209,14 +189,9 @@ div.center-column :hover {
   font-size: 0.7em;
 }
 
-// .post-date,
-// .post-tags {
-// }
-
-
 // コラムの設定
 .memo hr {
-  margin: 4em 0 4em 0;
+  margin: 4em 0;
 }
 
 .memo-title {
@@ -229,8 +204,8 @@ div.center-column :hover {
 }
 
 .memo-contents {
-  line-height: 1.4em; //行間
-  margin: 0.5em 0 0.5em 0;
+  line-height: 1.4em;
+  margin: 0.5em 0;
 
   hr {
     width: 90%;
@@ -241,12 +216,12 @@ div.center-column :hover {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 20;
-  /* 任意の行数を指定 */
+  line-clamp: 20;
 }
 
 // タグページ
 .posts-by-tags {
-  line-height: 1.4em; //行間
+  line-height: 1.4em;
 }
 
 // トップページ
@@ -257,32 +232,20 @@ div.center-column :hover {
   overflow-wrap: anywhere;
 }
 
-// .notification {
-//   width: 100%;
-// }
-
 // 疑似marquee
-
-// .marqueeでマーキー対象を指定
-// {{どのマーキーか指定}} .marqueeで文字数分マーキーエリアを指定
-
 .left-column .marquee {
   min-width: 110%;
   animation: marquee 6s linear infinite;
 }
 
-// 指定終了
-
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  // width: 100%;
 }
 
 .marquee-area {
   overflow: hidden;
 }
-
 
 @keyframes marquee {
   0% {
@@ -294,17 +257,15 @@ div.center-column :hover {
   }
 }
 
-//レスポンシブ・デザイン
-
-
-@media all and (max-width: 599px) {
+// レスポンシブ・デザイン
+@media (max-width: 599px) {
   @import "1-column";
 }
 
-@media all and (min-width: 600px) {
+@media (min-width: 600px) {
   @import "2-column";
 }
 
-@media all and (min-width: 1000px) {
+@media (min-width: 1000px) {
   @import "3-column";
 }
