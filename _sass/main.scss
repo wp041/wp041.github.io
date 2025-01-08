@@ -94,7 +94,7 @@ div.right-column img {
   width: auto;
 }
 
-div.center-column:hover img {
+div.center-column :hover {
   filter: none;
   max-width: 100%;
 }
@@ -233,6 +233,8 @@ div.center-column:hover img {
 }
 
 // 疑似marquee
+// .marqueeでマーキー対象を指定
+// {{どのマーキーか指定}} .marqueeで文字数分マーキーエリアを指定
 .left-column .marquee {
   min-width: 110%;
   animation: marquee 6s linear infinite;
