@@ -78,23 +78,25 @@ pre {
   font-size: 0.9em;
 }
 
-// 画像フィルター設定
-div.center-column img,
+
+// 画像の設定
 div.right-column img {
   filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(125%) saturate(450%);
-}
-
-div.center-column img {
-  max-width: 50%;
-  transition: max-width 0.5s ease;
-}
-
-div.right-column img {
-  max-height: 1rem;
   width: auto;
+  max-height: 1rem;
 }
 
-div.center-column :hover {
+// 画像の拡大縮小設定
+div.center-column img {
+  filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(125%) saturate(450%);
+  max-width: 50%;
+
+  @media (min-width: 599px) {
+    transition: max-width 0.5s ease;
+  }
+}
+
+div.center-column img:hover {
   filter: none;
   max-width: 100%;
 }
@@ -124,10 +126,6 @@ div.center-column :hover {
 .center-column {
   padding-top: 14%;
   padding-bottom: 5%;
-
-  img {
-    width: 100%;
-  }
 }
 
 .content {
