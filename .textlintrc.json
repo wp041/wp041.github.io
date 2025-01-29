@@ -1,0 +1,20 @@
+{
+  "plugins": {},
+  "filters": {},
+  "rules": {
+    "ja-no-redundant-expression": true,
+    "ja-no-weak-phrase": true,
+    "ja-unnatural-alphabet": true,
+    "no-doubled-joshi": true,
+    "preset-jtf-style": true,
+    "sentence-length": true,
+    "comments": true,
+    "max-ten": {
+      "max": 3,
+      "strict": false,
+      "touten": "、",
+      "kuten": "。"
+    },
+    "first-sentence-length": true
+  }
+}
