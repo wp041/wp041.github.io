@@ -1,4 +1,5 @@
 ---
+title: "RTA in Japan summer 2025 のおすすめRTA"
 type: ""
 description: ""
 preview: ""

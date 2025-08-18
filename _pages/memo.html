@@ -20,7 +20,7 @@ permalink: /memo
     <br>
     <br>
     {% for post in site.tags[tag_name] %}
-    <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title | replace: " ", "-" }}</a>
+    <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title }}</a>
     <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
     <div class="memo-contents">{{ post.excerpt }}</div>
     <!-- <hr /> -->
