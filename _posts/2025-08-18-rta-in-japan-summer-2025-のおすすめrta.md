@@ -33,7 +33,7 @@ fmContentType: memo
 [The Elder Scrolls V: Skyrim](https://www.youtube.com/watch?v=vIW1wfzwMto)
 おすすめ度：4
 - 馬に通報されるの面白すぎる
-- RTA in RTA in japan すごすぎる！
+- ***RTA in*** RTA in japan すごすぎる！
 	- やっぱany%的なものってエンタメ性高いんだなって
 
 [NieR:Automata](https://www.youtube.com/watch?v=CpbKn8n5Ziw)
