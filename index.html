@@ -19,6 +19,114 @@ title: ホーム
   your job, but ...... something, it's sad. I think it's sad, I don't know.
   ......
 </div>
+
+<script>
+  class AutoScroller {
+    constructor(options = {}) {
+      this.options = {
+        speed: 0.25,                    // ピクセル/フレーム
+        pauseDuration: 500,           // 手動スクロール後の待機時間（ミリ秒）
+        stopAtBottom: true,            // 最下部で停止するか
+        ...options
+      };
+
+      this.isScrolling = true;
+      this.pauseTimer = null;
+      this.lastScrollY = window.scrollY;
+      this.accumulatedScroll = 0;      // 累積スクロール量
+
+      this.init();
+    }
+
+    init() {
+      this.setupEventListeners();
+      this.startAnimation();
+    }
+
+    setupEventListeners() {
+      // マウスホイール
+      window.addEventListener('wheel', () => this.handleUserScroll(), { passive: true });
+
+      // タッチスクロール
+      let touchStartY = 0;
+      window.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        const touchY = e.touches[0].clientY;
+        if (Math.abs(touchY - touchStartY) > 10) {
+          this.handleUserScroll();
+        }
+      }, { passive: true });
+
+      // キーボード操作
+      window.addEventListener('keydown', (e) => {
+        const scrollKeys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '];
+        if (scrollKeys.includes(e.key)) {
+          this.handleUserScroll();
+        }
+      });
+    }
+
+    handleUserScroll() {
+      this.isScrolling = false;
+      this.accumulatedScroll = 0;  // 累積をリセット
+
+      clearTimeout(this.pauseTimer);
+      this.pauseTimer = setTimeout(() => {
+        this.isScrolling = true;
+      }, this.options.pauseDuration);
+    }
+
+    startAnimation() {
+      const animate = () => {
+        if (this.isScrolling) {
+          // 小数点以下を累積
+          this.accumulatedScroll += this.options.speed;
+
+          // 1ピクセル以上になったら実際にスクロール
+          if (this.accumulatedScroll >= 1) {
+            const scrollAmount = Math.floor(this.accumulatedScroll);
+            this.accumulatedScroll -= scrollAmount;  // 余りを保持
+
+            const newScrollY = window.scrollY + scrollAmount;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+            if (this.options.stopAtBottom && newScrollY >= maxScroll) {
+              window.scrollTo(0, maxScroll);
+              this.isScrolling = false;
+            } else {
+              window.scrollTo(0, newScrollY);
+            }
+
+            this.lastScrollY = window.scrollY;
+          }
+        }
+
+        requestAnimationFrame(animate);
+      };
+
+      requestAnimationFrame(animate);
+    }
+  }
+
+  // 自動スクローラーの初期化
+  document.addEventListener('DOMContentLoaded', () => {
+    new AutoScroller({
+      speed: 0.25,
+      pauseDuration: 500,
+      stopAtBottom: true
+    });
+  });
+</script>
+
+<style>
+  .notification {
+    display: none;
+  }
+</style>
+
 <!-- 
 <h1>トップページに何を書くかは、後で考える</h1>
 ちかいうちにメディアクエリを学び、スマホに対応させなきゃならん
