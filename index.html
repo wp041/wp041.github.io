@@ -33,7 +33,7 @@ title: ホーム
       this.isScrolling = true;
       this.pauseTimer = null;
       this.lastScrollY = window.scrollY;
-      this.accumulatedScroll = 0;      // 累積スクロール量
+      this.targetScrollY = window.scrollY;  // 目標スクロール位置
 
       this.init();
     }
@@ -71,7 +71,7 @@ title: ホーム
 
     handleUserScroll() {
       this.isScrolling = false;
-      this.accumulatedScroll = 0;  // 累積をリセット
+      this.targetScrollY = window.scrollY;  // 現在位置を目標位置に
 
       clearTimeout(this.pauseTimer);
       this.pauseTimer = setTimeout(() => {
@@ -82,26 +82,23 @@ title: ホーム
     startAnimation() {
       const animate = () => {
         if (this.isScrolling) {
-          // 小数点以下を累積
-          this.accumulatedScroll += this.options.speed;
+          // 目標位置を更新
+          this.targetScrollY += this.options.speed;
 
-          // 1ピクセル以上になったら実際にスクロール
-          if (this.accumulatedScroll >= 1) {
-            const scrollAmount = Math.floor(this.accumulatedScroll);
-            this.accumulatedScroll -= scrollAmount;  // 余りを保持
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-            const newScrollY = window.scrollY + scrollAmount;
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-            if (this.options.stopAtBottom && newScrollY >= maxScroll) {
-              window.scrollTo(0, maxScroll);
-              this.isScrolling = false;
-            } else {
-              window.scrollTo(0, newScrollY);
-            }
-
-            this.lastScrollY = window.scrollY;
+          if (this.options.stopAtBottom && this.targetScrollY >= maxScroll) {
+            window.scrollTo(0, maxScroll);
+            this.isScrolling = false;
+          } else {
+            // 毎フレーム、目標位置にスクロール
+            window.scrollTo(0, this.targetScrollY);
           }
+
+          this.lastScrollY = window.scrollY;
+        } else {
+          // 停止中は現在位置を目標位置に同期
+          this.targetScrollY = window.scrollY;
         }
 
         requestAnimationFrame(animate);
@@ -120,12 +117,6 @@ title: ホーム
     });
   });
 </script>
-
-<style>
-  .notification {
-    display: none;
-  }
-</style>
 
 <!-- 
 <h1>トップページに何を書くかは、後で考える</h1>
