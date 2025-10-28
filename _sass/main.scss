@@ -13,10 +13,23 @@ body {
 
 // スマホ向け
 body:not(:has(.index)) {
+  position: relative;
   background-color: $background-color;
-  background-attachment: fixed;
-  background-position: 60% 35%;
-  background-repeat: no-repeat;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 60% 35%;
+    background-repeat: no-repeat;
+    background-size: auto; // 必要に応じて調整
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 
 body:has(.index) {
