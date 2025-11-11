@@ -41,7 +41,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>{{ page.title }} | wp041のサイト</title>
-  <link rel=" stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml" />
   <link rel="icon" href="/favicon.ico" />
   <style>
@@ -58,7 +58,11 @@
 
     gtag("config", "{{ site.google_analytics }}");
   </script>
-  {% feed_meta %} {% seo %} <div class="hamburger-menu">
+  {% feed_meta %} {% seo %}
+</head>
+
+<body ontouchstart="">
+  <div class="hamburger-menu">
     <input type="checkbox" id="menu-btn-check" class="menu-btn">
     <label for="menu-btn-check" class="menu-btn"><span></span></label>
     <!--ここからメニュー-->
@@ -66,9 +70,7 @@
       <div class="left-column">{% include left-column.jekyll %}</div>
       <!--ここまでメニュー-->
     </div>
-</head>
-
-<body ontouchstart="">
+  </div>
   <div class="main">
     <div class="left-column">{% include left-column.jekyll %}</div>
     {% include credit.jekyll %}

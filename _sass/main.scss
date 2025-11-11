@@ -26,7 +26,7 @@ body:not(:has(.index)) {
     height: 100%;
     background-position: 60% 35%;
     background-repeat: no-repeat;
-    background-size: auto; // 必要に応じて調整
+    background-size: auto;
     z-index: -1;
     pointer-events: none;
   }
@@ -47,7 +47,7 @@ body:has(.index) {
     background-image: url("/assets/images/ミァハイラスト - トリミング.png");
     background-position: 60% 35%;
     background-repeat: no-repeat;
-    background-size: auto; // ここでサイズ調整？
+    background-size: auto;
     z-index: -1;
     pointer-events: none;
   }
@@ -63,7 +63,7 @@ body {
   font-optical-sizing: auto;
 }
 
-// 要素のデフォ設定
+// 要素のデフォルト設定
 a:visited {
   color: $main-color;
 }
@@ -116,12 +116,7 @@ div.right-column img {
 div.center-column img {
   filter: sepia(100%) hue-rotate(201.2deg) brightness(101%) contrast(125%) saturate(450%);
   max-width: 50%;
-
   transition: max-width 0.5s ease;
-
-  @media (min-width: 599px) {
-    // transition: max-width 0.5s ease;
-  }
 }
 
 div.center-column img:hover {
@@ -129,7 +124,7 @@ div.center-column img:hover {
   max-width: 100%;
 }
 
-// 大体の設定
+// 全体の設定
 .menu-btn {
   display: none;
 }
@@ -241,8 +236,6 @@ div.center-column img:hover {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  // -webkit-line-clamp: 20;
-  // line-clamp: 20;
 }
 
 // タグページ

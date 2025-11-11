@@ -16,8 +16,8 @@
   <br/>
   <br/>
   <div class="random-content">
-    {% for post in site.posts limit: 1 where post.tags contains 'memo' %}
-
+    {% assign memo_posts = site.posts | where_exp: "post", "post.tags contains 'memo'" %}
+    {% for post in memo_posts limit: 1 %}
       <h2>
         <a href="{{ post.url }}" class="random-title">{{ post.title }}</a>
       </h2>
