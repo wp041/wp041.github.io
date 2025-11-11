@@ -1,10 +1,6 @@
-- name: トップ
+- name: トップ - TOP
   link: /
-- name: 概要
+- name: 概要 - ABOUT
   link: /about
-- name: 短文一覧（おすすめ）
-  link: /memo
-- name: 長めの文章
-  link: /article
-- name: タグによる分類
+- name: 記事一覧 - TITLES
   link: /tags

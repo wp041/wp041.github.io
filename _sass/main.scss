@@ -241,8 +241,8 @@ div.center-column img:hover {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 20;
-  line-clamp: 20;
+  // -webkit-line-clamp: 20;
+  // line-clamp: 20;
 }
 
 // タグページ
@@ -294,6 +294,6 @@ div.center-column img:hover {
   @import "2-column";
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
   @import "3-column";
 }
