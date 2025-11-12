@@ -82,35 +82,17 @@
     left: 0;
     opacity: 1;
 
-    /*メニューを画面内へ*/
-    .marquee-area {
-        position: fixed;
-        bottom: 32px;
-        right: -1px;
-        width: 100%;
+    .nav {
+        text-align: right;
+        right: 16px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 100px;
     }
 
-    .left-column {
-        display: block;
-        top: 100px;
-        width: auto;
-        text-align: right;
-        color: #0500ff;
-
-        .nav {
-            padding-left: 0;
-        }
-
-
-        position: fixed;
-        right: 16px;
-        top: 100px;
-
-        .marquee {
-            animation: marquee 12s linear infinite;
-            min-width: 100%;
-
-        }
+    .marquee {
+        animation: marquee 6s linear infinite;
+        min-width: 100%;
     }
 
 }
