@@ -79,7 +79,7 @@ hr {
 // 記事の設定
 h1 {
   font-weight: 900;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 h2,
@@ -87,8 +87,8 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.1em;
-  font-size: 1em;
+  line-height: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -101,9 +101,9 @@ pre {
   border: solid 1px;
   padding: 0.25rem;
   width: 90%;
-  margin: 0.25em auto;
+  margin: 0.25rem auto;
   white-space: pre-wrap;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 
@@ -132,11 +132,11 @@ div.center-column img:hover {
 }
 
 .nav {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .credit {
-  font-size: 0.7em;
+  font-size: 0.7rem;
   font-weight: 300;
   position: fixed;
   padding: 3px;
@@ -173,6 +173,7 @@ div.center-column img:hover {
   bottom: 4%;
   line-height: 1.15em;
   text-align: justify;
+  font-size: 0.7rem;
   padding-right: 0.5%;
 
   * {
@@ -181,8 +182,9 @@ div.center-column img:hover {
   }
 
   .random-title {
-    font-size: 0.9rem;
     line-height: initial;
+    font-weight: 600;
+    font-size: 0.9rem;
   }
 
   img {
@@ -208,7 +210,7 @@ div.center-column img:hover {
 // post
 .post-meta {
   text-align: right;
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 
 // コラムの設定
@@ -226,12 +228,12 @@ div.center-column img:hover {
 }
 
 .memo-contents {
-  line-height: 1.4em;
-  margin: 0.5em 0;
+  line-height: 1.4rem;
+  margin: 0.5rem 0;
 
   hr {
     width: 90%;
-    margin: 0.25em auto;
+    margin: 0.25rem auto;
   }
 
   overflow: hidden;
@@ -250,10 +252,10 @@ div.center-column img:hover {
 
 // トップページ
 .index {
-  font-size: 10em;
+  font-size: 12em;
   line-height: 100%;
   font-weight: 100;
-  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 // 疑似marquee
@@ -284,11 +286,11 @@ div.center-column img:hover {
 }
 
 // レスポンシブ・デザイン
-@media (max-width: 599px) {
+@media (max-width: 844px) {
   @import "1-column";
 }
 
-@media (min-width: 600px) {
+@media (min-width: 845px) {
   @import "2-column";
 }
 
