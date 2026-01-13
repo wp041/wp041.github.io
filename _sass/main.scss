@@ -171,14 +171,14 @@ div.center-column img:hover {
   position: fixed;
   padding: 3px;
   bottom: 4%;
-  line-height: 1.15em;
-  text-align: justify;
-  font-size: 0.7rem;
-  padding-right: 0.5%;
 
   * {
     margin: 0 !important;
     border: none;
+    line-height: 1.15em;
+    text-align: justify;
+    padding-right: 0.5%;
+    font-size: 0.7rem;
   }
 
   .random-title {
