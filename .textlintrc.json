@@ -1,6 +1,8 @@
 {
   "plugins": {},
-  "filters": {},
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "ja-no-redundant-expression": true,
     "ja-no-weak-phrase": true,
@@ -8,7 +10,6 @@
     "no-doubled-joshi": true,
     "preset-jtf-style": true,
     "sentence-length": true,
-    "comments": true,
     "max-ten": {
       "max": 3,
       "strict": false,

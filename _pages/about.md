@@ -8,7 +8,7 @@ permalink: /about
 このブログは、[白書大木]({{site.baseurl}}/author)が作成・運営しています。
 
 このブログには現在、主に1つの文書、 2 種類の文書群があります。
-- 文書 "authour"：[自己紹介です。]({{site.baseurl}}/author)
+- 文書 "author"：[自己紹介です。]({{site.baseurl}}/author)
 - 文書群 "article"：長めの文章です。[長めの文章]({{site.baseurl}}/article)から一覧して見ることができます。
 - 文書群 "memo": 駄文短文、長期保存の効くツイートみたいなものです。[短文一覧]({{site.baseurl}}/memo)から一覧して見ることができます。
 

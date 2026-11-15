@@ -21,10 +21,15 @@ description: >- # これは "baseurl: "までの改行を無視することを�
 author: Oki Whitepaper
 twitter_username: wp_041
 github_username: wp041
+twitter: # jekyll-seo-tag が Twitter カードに使う
+  username: wp_041
+  card: summary
+lang: ja_JP # og:locale
 google_analytics: G-B8H50J7XT4
 excerpt_separator: "<!--抜粋ここまで-->"
 
-future: true # これをするとなんかgithubpagesで困らない
+timezone: Asia/Tokyo # 未指定だとUTCで日付判定され、当日のJST記事が「未来の記事」扱いになる
+future: true # 念のため残す（timezone 指定前はこれで未来日付問題を回避していた）
 kramdown:
   input: GFM
   autolink: true #これいらないかも
@@ -37,7 +42,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
-  - textlintrc.json
   - package-lock.json
   - node_modules
 
