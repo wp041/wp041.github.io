@@ -28,11 +28,11 @@
   {% comment %} OGP・Twitterカード・canonical は jekyll-seo-tag が出力する（og:image は front matter の image）。title は上で独自形式にしているので出させない {% endcomment %}
   {% seo title=false %}
   {% feed_meta %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/favicon.ico" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap');
-  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
