@@ -2,16 +2,16 @@
 
   <div class="footer-action">
     <p>シェアできる：<a
-        href="https://twitter.com/share?url={{site.url}}{{page.url| cgi_escape }}&amp;text={{page.title}}-白書オオキのサイト"
-        rel="nofollow"
+        href="https://twitter.com/share?url={{ page.url | absolute_url | url_encode }}&amp;text={{ page.title | append: '-白書オオキのサイト' | url_encode }}"
+        rel="nofollow noopener"
         target="_blank"
         class="my-twitter-share-button">Twitterでシェア</a>
     </p>
+    {% if page.collection == "posts" %}
     <p>
-      編集履歴は<a href="https://github.com/wp041/wp041.github.io/commits/main/_posts/{{ date | date: " %Y-%m-%d"
-      }}-{{page.title}}.md">
-        ここ</a>から見れます
+      編集履歴は<a href="https://github.com/wp041/wp041.github.io/commits/main/{{ page.path | uri_escape }}">ここ</a>から見れます
     </p>
+    {% endif %}
   </div>
   <div class="footer-info">
     <details>

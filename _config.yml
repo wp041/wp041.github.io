@@ -13,6 +13,8 @@
 # お望みのカスタム変数を作成することができ, テンプレートから {{ site.myvariable }}経由でアクセスすることができます.
 
 title: 白書大木
+url: https://wp041.github.io # OGP などの絶対URLに使う（未指定だとローカルビルドで変な値になる）
+baseurl: ""
 email: 041.whitepaper@gmail.com
 description: >- # これは "baseurl: "までの改行を無視することを意味する。
   ブログ
@@ -58,6 +60,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      image: /assets/images/wp-logo.png # og:image の既定値（記事側で image: を書けば上書き）
 
 # Build settings
 # theme: minima

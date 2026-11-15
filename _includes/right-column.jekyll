@@ -15,17 +15,17 @@
   新着テキスト↓
   <br/>
   <br/>
-  <div class="random-content">
-    {% assign memo_posts = site.posts | where_exp: "post", "post.tags contains 'memo'" %}
-    {% for post in memo_posts limit: 1 %}
+  {% assign memo_posts = site.posts | where_exp: "post", "post.tags contains 'memo'" %}
+  {% for post in memo_posts limit: 1 %}
+    <div class="random-content">
       <h2>
-        <a href="{{ post.url }}" class="random-title">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}" class="random-title">{{ post.title }}</a>
       </h2>
       <br/>
       {{ post.excerpt }}
       <br/>
-      </div>
-      ({{ post.date | date: "%Y-%m-%d" }})
-    {% endfor %}
-  <a href="{{ site.baseurl}}/memo">もっとみる⤴</a>
+    </div>
+    ({{ post.date | date: "%Y-%m-%d" }})
+  {% endfor %}
+  <a href="{{ '/memo' | relative_url }}">もっとみる⤴</a>
 </div>
