@@ -107,10 +107,38 @@ title: ホーム
     }
   }
 
-  // 自動スクローラーの初期化
-  document.addEventListener('DOMContentLoaded', () => {
-    new AutoScroller();
+  // 背景の絵とページの中身（文字・ナビ・クレジット・ロゴ）を同時に出す
+  // <head> で html に付けた .top-waiting（main.scss で絵と中身を隠している）を、
+  // 背景画像とフォントの両方が揃った時点で外す。遅い回線で待たせすぎないよう上限を設ける
+  const TOP_BACKGROUND = '/assets/images/top-background.webp'; // main.scss / default.html の preload と同じURL
+  const MAX_WAIT_MS = 1000;
+
+  function loadImage(src) {
+    const img = new Image();
+    img.src = src;
+    if (img.decode) return img.decode().catch(() => {});
+    return new Promise((resolve) => { img.onload = img.onerror = resolve; });
+  }
+
+  function loadFont() {
+    if (!document.fonts || !document.fonts.load) return Promise.resolve();
+    // .index は weight 100。英文なのでラテン文字のサブセットを読み込ませる
+    return document.fonts.load('100 1em "Noto Sans JP"', 'Our').catch(() => {});
+  }
+
+  const domReady = new Promise((resolve) => {
+    if (document.readyState !== 'loading') resolve();
+    else document.addEventListener('DOMContentLoaded', resolve, { once: true });
   });
+  const timeout = new Promise((resolve) => setTimeout(resolve, MAX_WAIT_MS));
+
+  Promise.race([Promise.all([loadImage(TOP_BACKGROUND), loadFont(), domReady]), timeout])
+    .then(() => domReady)
+    .then(() => {
+      document.documentElement.classList.remove('top-waiting');
+      // 自動スクローラーは表示されてから動かす
+      new AutoScroller();
+    });
 </script>
 
 <style>

@@ -5,15 +5,16 @@ permalink: /memo
 
 {% include memo-list.jekyll %}
 
+<h1>{{ page.title }}</h1>
+<p>
+  ここには「メモ」というタグがついた文章を表示しています
+</p>
+<p>
+  一括で見ないときは<a href="{{ '/tags' | relative_url }}">タグページ</a>から見た方がタイトルだけ表示されて便利かもです
+</p>
+
 <section class="posts-by-tags">
   {% for tag_name in tag_names %}
-  <h1>{{ page.title }}</h1>
-  <p>
-    ここには「メモ」というタグがついた文章を表示しています
-  </p>
-  <p>
-    一括で見ないときは<a href="{{ site.baseurl }}/tags">タグページ</a>から見た方がタイトルだけ表示されて便利かもです
-  </p>
   <div class="memo">
     <!-- <hr /> -->
     <br>
@@ -23,7 +24,7 @@ permalink: /memo
     <br>
     <br>
     {% for post in site.tags[tag_name] %}
-    <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title }}</a>
+    <a class="memo-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
     <div class="memo-contents">{{ post.excerpt }}</div>
     <!-- <hr /> -->

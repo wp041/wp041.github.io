@@ -22,31 +22,22 @@
     -->
 
 <head>
-  <!-- ogp 開始 -->
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:site_name" content="{{ site.title | default: site.github.repository_name }}" />
-  {% if page.description %}
-  <meta property="og:description" content="{{ page.description }}" />
-  {% else %}
-  <meta property="og:description" content="{{ site.description | default: site.github.project_tagline }}" />
-  {% endif %}
-  {% if page.preview %}
-  <meta property="og:image" content="{{ page.preview }}" />
-  {% else %}
-  <meta property="og:image" content="{{ site.url }}/assets/images/wp-logo.png" />
-  {% endif %}
-  <!-- ogp 終了 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>{{ page.title }} | wp041のサイト</title>
+  {% comment %} OGP・Twitterカード・canonical は jekyll-seo-tag が出力する（og:image は front matter の image）。title は上で独自形式にしているので出させない {% endcomment %}
+  {% seo title=false %}
+  {% feed_meta %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml" />
   <link rel="icon" href="/favicon.ico" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap');
-  </style>
+  {% if page.url == "/" %}
+  {% comment %} トップ: 背景の絵を早めに取りに行き、揃うまで絵とページの中身を隠す（index.html のスクリプトが外す） {% endcomment %}
+  <link rel="preload" as="image" href="/assets/images/top-background.webp" fetchpriority="high">
+  <script>document.documentElement.classList.add("top-waiting");</script>
+  {% endif %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -58,7 +49,6 @@
 
     gtag("config", "{{ site.google_analytics }}");
   </script>
-  {% feed_meta %} {% seo %}
 </head>
 
 <body ontouchstart="">

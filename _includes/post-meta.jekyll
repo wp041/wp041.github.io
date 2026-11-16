@@ -1,27 +1,26 @@
-{% if post %}
-  {% assign date = post.date %} {% assign created = page.created %} {% assign updated = page.updated %} {% assign tags = post.tags %} {% assign keywords = page.keywords %}
-{% else %}
-  {% assign date = page.date %} {% assign created = page.created %} {% assign updated = page.updated %} {% assign tags = page.tags %} {% assign keywords = page.keywords %}
-{% endif %}
-
-<span class="post-meta">
-  <div class="post-date">published: {{ date | date: "%Y-%m-%d" }}</div>
-  <div class="post-date">created: {{ created | date: "%Y-%m-%d" }}</div>
-  <div class="post-date">updated: {{ updated | date: "%Y-%m-%d" }}</div>
+{% comment %} 空（未設定・null・""・[]）の項目は行ごと出さない {% endcomment %}
+<div class="post-meta">
+  <div class="post-date">published: {{ page.date | date: "%Y-%m-%d" }}</div>
+  {% if page.created and page.created != "" %}
+  <div class="post-date">created: {{ page.created | date: "%Y-%m-%d" }}</div>
+  {% endif %}
+  {% if page.updated and page.updated != "" %}
+  <div class="post-date">updated: {{ page.updated | date: "%Y-%m-%d" }}</div>
+  {% endif %}
+  {% if page.tags.size > 0 %}
   <div class="post-tags">
     tag:
-    {% for tag in tags %}
-      <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}">
-        {{ tag }}
-      </a>
+    {% for tag in page.tags %}
+      <a href="{{ '/tags' | relative_url }}#{{ tag | slugize }}">{{ tag }}</a>
     {% endfor %}
   </div>
+  {% endif %}
+  {% if page.keywords.size > 0 %}
   <div class="post-keywords">
     keywords:
-    {% for keywords in keywords %}
-      {% comment %} <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}"> {% endcomment %}
-      {{ keywords }}
-      {% comment %} </a> {% endcomment %}
+    {% for keyword in page.keywords %}
+      {{ keyword }}
     {% endfor %}
   </div>
-</span>
+  {% endif %}
+</div>

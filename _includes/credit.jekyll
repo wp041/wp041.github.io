@@ -1,5 +1,5 @@
 <div class="credit">
-  ©2024 Oki Whitepaper. ALL Rights Reserved
+  ©2024–{{ site.time | date: "%Y" }} Oki Whitepaper. All Rights Reserved
   <br>
-  Reproduction, reposting ormodification of the contentof this site is prohibited.
+  Reproduction, reposting or modification of the content of this site is prohibited.
 </div>

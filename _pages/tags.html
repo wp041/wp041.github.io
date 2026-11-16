@@ -3,6 +3,12 @@ title: タグ
 permalink: /tags
 ---
 
+{% assign tag_names = "" | split: "|" %}
+{% for posts_by_tag in site.tags %}
+  {% assign tag_names = tag_names | push: posts_by_tag.first %}
+{% endfor %}
+{% assign tag_names = tag_names | sort %}
+
 <h1>{{ page.title }}について</h1>
 <p>
   このブログには、主に 2 種類のタグがあります
@@ -11,28 +17,30 @@ permalink: /tags
   <br>
   <br>
   リンク先にてまとめて読んだりプレビュー付きで見ることができます
+</p>
 <ul>
-  <li><a href="{{site.baseurl}}/article">記事（articleタグ）</a>
-  <li><a href="{{site.baseurl}}/memo">メモのタイムライン（memoタグ）</a>
+  <li><a href="{{ '/article' | relative_url }}">記事（articleタグ）</a></li>
+  <li><a href="{{ '/memo' | relative_url }}">メモのタイムライン（memoタグ）</a></li>
 </ul>
 <br>
 <br>
-</p>
 
 
 <h1>記事一覧</h1>
 ※上の方が新しい
-<!-- <h2>このサイトの記事に含まれるタグ一覧</h2>
-{% include tag-cloud.jekyll tag_names=tag_names %} -->
+{% comment %}
+<h2>このサイトの記事に含まれるタグ一覧</h2>
+{% include tag-cloud.jekyll %}
+{% endcomment %}
 
 <section class="posts-by-tags">
   {% for tag_name in tag_names %}
   <div>
-    <h3 id="tag-name">{{ tag_name }}のタグが付いた記事一覧</h3>
+    <h3 id="{{ tag_name | slugize }}">{{ tag_name }}のタグが付いた記事一覧</h3>
     <ul>
       {% for post in site.tags[tag_name] %}
       <li>
-        <a href="{{ post.url | prepend: baseurl }}"> {{ post.title }} </a>
+        <a href="{{ post.url | relative_url }}"> {{ post.title }} </a>
       </li>
       {% endfor %}
     </ul>

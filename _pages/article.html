@@ -31,7 +31,7 @@ sort %}
   <div>
     {% for post in site.tags[tag_name] %}
     <div class="memo">
-      <a class="memo-title" href="{{ post.url | prepend: baseurl }}">{{ post.title | replace: " ", "-" }}</a>
+      <a class="memo-title" href="{{ post.url | relative_url }}">{{ post.title | replace: " ", "-" }}</a>
       <div class="memo-date">{{ post.date | date: "%Y-%m-%d %a" }}</div>
       <div class="memo-contents">{{ post.excerpt }}</div>
       <!-- <hr /> -->
