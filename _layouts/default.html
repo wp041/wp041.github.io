@@ -33,6 +33,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&display=swap">
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="icon" href="/favicon.ico" />
+  {% if page.url == "/" %}
+  {% comment %} トップ: 背景の絵を早めに取りに行き、揃うまで絵とページの中身を隠す（index.html のスクリプトが外す） {% endcomment %}
+  <link rel="preload" as="image" href="/assets/images/top-background.webp" fetchpriority="high">
+  <script>document.documentElement.classList.add("top-waiting");</script>
+  {% endif %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>

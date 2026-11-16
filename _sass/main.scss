@@ -1,7 +1,6 @@
 // 変数の定義
 $main-color: #0500ff;
 $background-color: rgba(250, 250, 245, 0.88);
-$index-background-color: #8e8e8e;
 $font-family: "Noto Sans JP", "Noto Emoji", sans-serif;
 $font-size: 15px;
 $font-weight: 450;
@@ -32,9 +31,19 @@ body:not(:has(.index)) {
   }
 }
 
+// トップ: 他ページと同じ紙色の地に、淡くした絵を置き、画面の端に向かって地へ溶かす
+// top-background.webp は「ミァハイラスト - トリミング.png」から作成。
+//   濃さ = 0.62 × ((167 - 明度) / (167 - 34)) ^ 1.6 を紙色 #FBFBF6 に掛けたもの
+//   （元の階調は保ったまま淡くする。白飛びさせると輪郭が丸く崩れるので不可）
+// 端のフェードは画面基準でかけたいので、画像ではなく mask-image で行う
+@function top-fade($cx) {
+  @return radial-gradient(ellipse 50% 50% at #{$cx} 38%,
+    #000 55%, rgba(0, 0, 0, 0.9) 73%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.1) 127%, transparent 145%);
+}
+
 body:has(.index) {
   position: relative;
-  background-color: $index-background-color;
+  background-color: $background-color;
   overflow-x: hidden;
 
   &::before {
@@ -44,15 +53,29 @@ body:has(.index) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/assets/images/ミァハイラスト - トリミング.png");
+    background-image: url("/assets/images/top-background.webp");
     background-position: 60% 35%;
     background-repeat: no-repeat;
     background-size: auto;
-    background-color: rgba(250, 250, 245, 0.88);
-    background-blend-mode: lighten;
+    -webkit-mask-image: top-fade(42%);
+    mask-image: top-fade(42%);
     z-index: -1;
     pointer-events: none;
+
+    // 1カラム時は絵の右寄り（目元）が見えるので、中心を右へ
+    @media (max-width: 844px) {
+      -webkit-mask-image: top-fade(60%);
+      mask-image: top-fade(60%);
+    }
   }
+}
+
+// トップ: 背景の絵とページの中身（文字・ナビ・クレジット・ロゴ）を同時にぱっと出す（フェードなし）
+// .top-waiting は default.html の <head> で付き、絵とフォントが揃うと index.html のスクリプトが外す
+// 待っている間も body の背景（紙色）は見えている。JS が動かない環境ではクラスが付かないので最初から表示される
+html.top-waiting body::before,
+html.top-waiting body > * {
+  visibility: hidden;
 }
 
 // メインスタイル
